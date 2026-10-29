@@ -1,0 +1,131 @@
+:root {
+    /* font */
+    --font-f: "Fraunces", serif;
+    --font-ps: "Public Sans", sans-serif;
+    --font-pm: "IBM Plex Mono", monospace;
+
+    /* color */
+    --bg-body: #F7F2E7;
+    --bg-nav: #FFFDF8;
+    --border-nav: #D7CBB6;
+    --text-disabled: #4C5B52;
+    --text-dark: #13231B;
+    --text-light: #ffffff;
+    --btn-green: #0F6B4F;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+
+/* REUSEABLE */
+
+.btn-r-green {
+    background-color: var(--btn-green);
+    border: 1px solid var(--btn-green);
+    border-radius: 999px;
+    padding: 10px 20px;
+    color: var(--text-light);
+}
+
+.btn-invis {
+    background-color: unset;
+    border: none;
+    color: var(--text-disabled);
+}
+
+
+/* CUSTOM */
+
+header > nav {
+    display: flex;
+    background-color: var(--bg-nav);
+    border: 1px solid var(--border-nav);
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 68px;
+}
+
+header > nav > .logo > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: var(--font-f);
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--text-dark);
+    letter-spacing: -0.40px;
+}
+
+header > nav > .menu > ul {
+    display: flex;
+    gap: 30px;
+}
+
+header > nav > .menu > ul > li {
+    list-style: none;
+}
+
+header > nav > .menu > ul > li > a {
+    text-decoration: none;
+    color: var(--text-disabled);
+    font-weight: 500;
+    font-family: var(--font-ps);
+    font-size: 14px;
+}
+
+header > nav > .nav-btn {
+    display: flex;
+    gap: 35px;
+}
+
+header > nav > .nav-btn > .signin{
+    font-family: var(--font-ps);
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+
+header > nav > .nav-btn > .signin::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+    background-image: url(img/signin.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    
+}
+
+header > nav > .nav-btn > .report{
+    font-family: var(--font-ps);
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+
+header > nav > .nav-btn > .report::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+    background-image: url(img/btn-plus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
