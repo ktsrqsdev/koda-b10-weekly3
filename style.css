@@ -31,6 +31,20 @@ body {
 
 /* REUSEABLE */
 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-ps);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-lg {
+    font-size: 15px;
+}
+
 .btn-r-light,
 .btn-r-green {
     border-radius: 999px;
@@ -97,22 +111,18 @@ body {
     color: var(--dark);
 }
 
-/* Custom */
-
-header > nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     min-height: 68px;
     padding: var(--pd);
     background-color: var(--bg-secondary);
     border: 1px solid var(--bd-primary);
 }
 
-header > nav > .logo > a {
+.navbar-logo {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 8px;
     color: var(--dark);
@@ -123,17 +133,13 @@ header > nav > .logo > a {
     letter-spacing: -0.4px;
 }
 
-header > nav > .menu > ul {
+.navbar-menu {
     display: flex;
-    align-items: center;
     gap: 30px;
-}
-
-header > nav > .menu > ul > li {
     list-style: none;
 }
 
-header > nav > .menu > ul > li > a {
+.navbar-menu a {
     color: var(--disabled);
     text-decoration: none;
     font-family: var(--font-ps);
@@ -141,33 +147,13 @@ header > nav > .menu > ul > li > a {
     font-weight: 500;
 }
 
-header > nav > .nav-btn {
+.navbar-actions {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-header > nav > .nav-btn > .signin {
-    font-family: var(--font-ps);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-header > nav > .nav-btn > .signin > img {
-    margin-right: 7px;
-    vertical-align: middle;
-}
-
-header > nav > .nav-btn > .report {
-    font-family: var(--font-ps);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-header > nav > .nav-btn > .report > img {
-    margin-right: 7px;
-    vertical-align: middle;
-}
+/* Custom */
 
 main > .hero > .btn-group-h {
     display: flex;
