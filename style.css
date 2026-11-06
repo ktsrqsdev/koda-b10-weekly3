@@ -382,3 +382,82 @@ body {
 .stat-num-dark {
     color: var(--dark);
 }
+
+.footer {
+    margin-top: 80px;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--bd-primary);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 32px;
+    padding: 40px var(--gutter);
+}
+
+.footer-brand {
+    margin-bottom: 12px;
+    font-family: var(--font-f);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.footer-text {
+    max-width: 44ch;
+    font-family: var(--font-ps);
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--disabled);
+}
+
+.footer-note {
+    margin-top: 16px;
+    max-width: 44ch;
+    font-family: var(--font-ps);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--danger);
+}
+
+.footer-title {
+    margin-bottom: 12px;
+    font-family: var(--font-pm);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--success);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--disabled);
+    text-decoration: none;
+    font-family: var(--font-ps);
+    font-size: 14px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 var(--gutter);
+    padding: 20px 0;
+    border-top: 1px solid var(--bd-secondary);
+    font-family: var(--font-ps);
+    font-size: 12px;
+    color: var(--disabled2);
+}
+
+.UU {
+    font-family: var(--font-pm);
+    font-size: 10px;
+}
