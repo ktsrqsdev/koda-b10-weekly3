@@ -1,117 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,100..900,1;1,9..144,100..900,1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,100..900,1;1,9..144,100..900,1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>WargaReport - Live Feed Page</title>
-</head>
+        <title>WargaReport - Live Feed Page</title>
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="navbar-logo"><img src="assets/logowr.svg" alt="logo warga report">WargaReport</a>
-            <ul class="navbar-menu">
-                <li><a class="navbar-link is-active" href="liveFeed.html" aria-current="page">Live Feed</a></li>
-                <li><a class="navbar-link" href="track.html">Track</a></li>
-                <li><a class="navbar-link" href="help.html">How it works</a></li>
-            </ul>
-            <div class="navbar-actions">
-                <button class="btn btn-ghost"><img src="assets/signin.svg" alt="">Sign In</button>
-                <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="">Report</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-head">
-            <div>
-                <p class="eyebrow">Public Incident Registry</p>
-                <h1 class="heading-lg">Community Reports & Fixes</h1>
-                <p class="subheading-sm">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</p>
-            </div>
-            <div class="segmented" role="group" aria-label="View mode">
-                <button class="segmented-item is-active"><img class="icon" src="assets/list.svg" alt="icon list">Feed</button>
-                <button class="segmented-item"><img class="icon" src="assets/map.svg" alt="icon map">Map</button>
-            </div>
-        </section>
-    </main>
-
-    <section class="toolbar" aria-label="Filters">
-            <label class="search">
-                <img class="icon" src="assets/search.svg" alt="">
-                <input class="search-input" type="search" placeholder="Search by street name, complaint ID, or keyword...">
-            </label>
-            <div class="chip-row">
-                <button class="chip is-active">All Issues (6)</button>
-                <button class="chip"><img class="icon" src="assets/roads.svg" alt="icon roads and transit">Roads &amp; Transit</button>
-                <button class="chip"><img class="icon" src="assets/water.svg" alt="icon water and sewage">Water &amp; Sewage</button>
-                <button class="chip"><img class="icon" src="assets/lighting.svg" alt="icon street lighting">Street Lighting</button>
-                <button class="chip"><img class="icon" src="assets/waste.svg" alt="icon sanitation and waste">Sanitation &amp; Waste</button>
-                <button class="chip"><img class="icon" src="assets/parks.svg" alt="icon public parks and tress">Public Parks &amp; Trees</button>
-                <button class="chip"><img class="icon" src="assets/noise.svg" alt="">Noise &amp; Disturbance</button>
-                <button class="chip"><img class="icon" src="assets/building.svg" alt="">Building &amp; Zoning</button>
-            </div>
-            <div class="filter-bar">
-                <div class="segmented" role="group" aria-label="Status">
-                    <span class="segmented-label">Status:</span>
-                    <button class="segmented-item is-active">All</button>
-                    <button class="segmented-item">Submitted</button>
-                    <button class="segmented-item">Received</button>
-                    <button class="segmented-item">In review</button>
-                    <button class="segmented-item">Assigned</button>
-                    <button class="segmented-item">Awaiting your info</button>
-                    <button class="segmented-item">Resolved</button>
-                    <button class="segmented-item">Closed</button>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="navbar-logo"><img src="assets/logowr.svg" alt="logo warga report">WargaReport</a>
+                <ul class="navbar-menu">
+                    <li><a class="navbar-link is-active" href="liveFeed.html" aria-current="page">Live Feed</a></li>
+                    <li><a class="navbar-link" href="track.html">Track</a></li>
+                    <li><a class="navbar-link" href="help.html">How it works</a></li>
+                </ul>
+                <div class="navbar-actions">
+                    <button class="btn btn-ghost"><img src="assets/signin.svg" alt="icon signin">Sign In</button>
+                    <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="icon add report">Report</button>
                 </div>
-                <label class="chip"><input type="checkbox">With photos/proof only</label>
-            </div>
-        </section>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-head">
+                <div>
+                    <p class="eyebrow">Public Incident Registry</p>
+                    <h1 class="heading-lg">Community Reports & Fixes</h1>
+                    <p class="subheading-sm">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</p>
+                </div>
+                <div class="segmented">
+                    <button class="segmented-item is-active"><img class="icon" src="assets/list.svg" alt="icon list">Feed</button>
+                    <button class="segmented-item"><img class="icon" src="assets/map.svg" alt="icon map">Map</button>
+                </div>
+            </section>
+
+            <section class="toolbar">
+                <label class="search">
+                    <img class="icon" src="assets/search.svg" alt="icon search">
+                    <input class="search-input" type="search" placeholder="Search by street name, complaint ID, or keyword...">
+                </label>
+                <div class="chip-row">
+                    <button class="chip is-active">All Issues (6)</button>
+                    <button class="chip"><img class="icon" src="assets/roads.svg" alt="icon roads and transit">Roads &amp; Transit</button>
+                    <button class="chip"><img class="icon" src="assets/water.svg" alt="icon water and sewage">Water &amp; Sewage</button>
+                    <button class="chip"><img class="icon" src="assets/lighting.svg" alt="icon street lighting">Street Lighting</button>
+                    <button class="chip"><img class="icon" src="assets/waste.svg" alt="icon sanitation and waste">Sanitation &amp; Waste</button>
+                    <button class="chip"><img class="icon" src="assets/parks.svg" alt="icon public parks and tress">Public Parks &amp; Trees</button>
+                    <button class="chip"><img class="icon" src="assets/noise.svg" alt="icon noise and disturbance">Noise &amp; Disturbance</button>
+                    <button class="chip"><img class="icon" src="assets/building.svg" alt="icon building and zoning">Building &amp; Zoning</button>
+                </div>
+                <div class="filter-bar">
+                    <div class="segmented">
+                        <span class="segmented-label">Status:</span>
+                        <button class="segmented-item is-active">All</button>
+                        <button class="segmented-item">Submitted</button>
+                        <button class="segmented-item">Received</button>
+                        <button class="segmented-item">In review</button>
+                        <button class="segmented-item">Assigned</button>
+                        <button class="segmented-item">Awaiting your info</button>
+                        <button class="segmented-item">Resolved</button>
+                        <button class="segmented-item">Closed</button>
+                    </div>
+                    <label class="chip"><input type="checkbox">With photos/proof only</label>
+                </div>
+            </section>
+
+            <ul class="feed">
+                <li class="feed-item">
+                    <img class="thumb" src="assets/img/img1.png" alt="Report photo CMP-2026-8841">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-review"><img class="icon" src="assets/review.svg" alt="icon in review">In review</span>
+                            <span class="card-code">CMP-2026-8841</span>
+                            <span class="feed-agency">Perumda PAM JAYA (Clean Drinking Water)</span>
+                        </div>
+                        <a class="card-title-sm" href="#">PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)<span class="feed-tag">Water &amp; Sewage</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="icon Likes">148</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">2 proof</span>
+                        <span class="feed-date">Oct 29</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+                <li class="feed-item">
+                    <img class="thumb" src="assets/img/img2.png" alt="Report photo CMP-2026-8819">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-assigned"><img class="icon" src="assets/assigned.svg" alt="icon assigned">Assigned</span>
+                            <span class="card-code">CMP-2026-8819</span>
+                            <span class="feed-agency">Dinas Bina Marga DKI Jakarta (Roads &amp; Sidewalks)</span>
+                        </div>
+                        <a class="card-title-sm" href="#">Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)<span class="feed-tag">Roads &amp; Transit</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="Likes">92</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">1 proof</span>
+                        <span class="feed-date">Oct 28</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+                <li class="feed-item">
+                    <img class="thumb" src="assets/img/img3.png" alt="Report photo CMP-2026-8794">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-resolved"><img class="icon" src="assets/resolved.svg" alt="icon resolved">Resolved</span>
+                            <span class="card-code">CMP-2026-8794</span>
+                            <span class="feed-agency">Dinas Perhubungan DKI Jakarta (PJU &amp; Traffic)</span>
+                        </div>
+                        <a class="card-title-sm" href="#">Complete PJU streetlight outage spanning 300 meters along residential corridor</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03<span class="feed-tag">Street Lighting</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes" disabled><img src="assets/i-thumbs-up.svg" alt="icon Likes">64</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">1 proof</span>
+                        <span class="feed-date">Oct 28</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+                <li class="feed-item">
+                    <img class="thumb" src="assets/img/img4.png" alt="Report photo CMP-2026-8720">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-review"><img class="icon" src="assets/review.svg" alt="icon in review">In review</span>
+                            <span class="card-code">CMP-2026-8720</span>
+                            <span class="feed-agency">Dinas Lingkungan Hidup DKI Jakarta (Waste &amp; Rivers)</span>
+                        </div>
+                        <a class="card-title-sm" href="#">Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Kampung Kemang, RT 02 / RW 01 (bantaran Kali Krukut)<span class="feed-tag">Sanitation &amp; Waste</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="icon Likes">78</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">1 proof</span>
+                        <span class="feed-date">Oct 29</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+                <li class="feed-item">
+                    <img class="thumb" src="assets/img/img5.png" alt="Report photo CMP-2026-8650">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-assigned"><img class="icon" src="assets/assigned.svg" alt="icon assigned">Assigned</span>
+                            <span class="card-code">CMP-2026-8650</span>
+                            <span class="feed-agency">Dinas Pertamanan dan Hutan Kota DKI Jakarta</span>
+                        </div>
+                        <a class="card-title-sm" href="#">Hazardous decayed Trembesi tree limb at risk of collapse over walking path</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Taman Suropati (sisi timur, dekat patung ASEAN)<span class="feed-tag">Public Parks &amp; Trees</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="icon Likes">45</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">1 proof</span>
+                        <span class="feed-date">Oct 28</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+                <li class="feed-item">
+                    <div class="feed-body">
+                        <div class="card-top">
+                            <span class="badge badge-submitted"><img class="icon" src="assets/submitted.svg" alt="icon submitted">Submitted</span>
+                            <span class="card-code">CMP-2026-8601</span>
+                            <span class="feed-agency">Satpol PP Provinsi DKI Jakarta (Public Order)</span>
+                        </div>
+                        <a class="card-title-sm submitted" href="#">Heavy excavation equipment operating past 22:00 WIB in residential alley</a>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Senopati No. 18, RT 06 / RW 02<span class="feed-tag">Noise &amp; Disturbance</span></p>
+                    </div>
+                    <div class="feed-meta">
+                        <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="icon Likes">39</button>
+                        <span class="feed-proof"><img class="icon" src="assets/proof.svg" alt="icon proof">1 proof</span>
+                        <span class="feed-date">Oct 29</span>
+                        <a href="#" class="link-green">Track</a>
+                    </div>
+                </li>
+            </ul>
+        </main>
 
 
-    <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <p class="footer-brand">WargaReport</p>
-                <p class="footer-text">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
-                <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+        <footer class="footer">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-brand">WargaReport</p>
+                    <p class="footer-text">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Citizens</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">File a report</a></li>
+                        <li><a href="#">Track complaint</a></li>
+                        <li><a href="#">Public reports registry</a></li>
+                        <li><a href="#">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Agencies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Participating bureaus</a></li>
+                        <li><a href="#">Officer triage queue</a></li>
+                        <li><a href="#">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Civic Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="#">Evidence guidelines</a></li>
+                        <li><a href="#">PII & redaction policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4 class="footer-title">Citizens</h4>
-                <ul class="footer-links">
-                    <li><a href="#">File a report</a></li>
-                    <li><a href="#">Track complaint</a></li>
-                    <li><a href="#">Public reports registry</a></li>
-                    <li><a href="#">My filing history</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>© 2026 WargaReport. All rights reserved.</p>
+                <p class="UU">UU No. 25/2009 Compliant</p>
             </div>
-            <div>
-                <h4 class="footer-title">Agencies</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Participating bureaus</a></li>
-                    <li><a href="#">Officer triage queue</a></li>
-                    <li><a href="#">SLA benchmarks</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer-title">Civic Trust</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Help & FAQs</a></li>
-                    <li><a href="#">Evidence guidelines</a></li>
-                    <li><a href="#">PII & redaction policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 WargaReport. All rights reserved.</p>
-            <p class="UU">UU No. 25/2009 Compliant</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
