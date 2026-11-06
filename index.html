@@ -27,43 +27,40 @@
             </ul>
 
             <div class="navbar-actions">
-                <button class="btn btn-invis"><img src="assets/signin.svg" alt="">Sign In</button>
-                <button class="btn btn-r-green"><img src="assets/btn-plus.svg" alt="">Report</button>
+                <button class="btn btn-ghost"><img src="assets/signin.svg" alt="">Sign In</button>
+                <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="">Report</button>
             </div>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <h1>See something broken? Snap it. We push the city to fix it.</h1>
-            <p>Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food
-                delivery order, and keep authorities accountable.</p>
-            <div class="btn-group-h">
-                <button class="btn-r-green snap"><img src="assets/camera.svg" alt="Icon Camera">Snap a report<img
-                        src="assets/i-arrow-right.svg" alt="icon arror right"></button>
-                <button class="btn-r-light track">Track a case</button>
+            <h1 class="heading-xl">See something broken? Snap it. We push the city to fix it.</h1>
+            <p class="subheading">Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food delivery order, and keep authorities accountable.</p>
+            <div class="btn-group">
+                <button class="btn btn-green btn-lg"><img src="assets/camera.svg" alt="Icon Camera">Snap a report<img src="assets/i-arrow-right.svg" alt="icon arrow right"></button>
+                <button class="btn btn-light btn-lg">Track a case</button>
             </div>
-            <div class="stats">
-                <p><span>48</span> reports today</p>
-                <p>&CenterDot;</p>
-                <p><span>194</span> fixed this week</p>
-                <p>&CenterDot;</p>
-                <p><span>2.3 days</span> avg response</p>
-            </div>
+
+            <p class="stats">
+                <span class="stat"><b class="stat-num stat-num-dark">48</b> reports today</span>
+                <span class="stat"><b class="stat-num">194</b> fixed this week</span>
+                <span class="stat"><b class="stat-num">2.3 days</b> avg response</span>
+            </p>
         </section>
         <div class="card-grid">
             <div class="card">
                 <span class="card-badge">01</span>
-                <p class="card-title">Snap & tag </p>
+                <p class="card-title">Snap & tag</p>
                 <p class="card-text">Take a photo or quick audio of the issue and provide the street location.</p>
             </div>
             <div class="card">
                 <span class="card-badge">02</span>
-                <p class="card-title">Report Review </p>
+                <p class="card-title">Report Review</p>
                 <p class="card-text">Our team verifies evidence and routes directly to the responsible bureau.</p>
             </div>
             <div class="card">
                 <span class="card-badge">03</span>
-                <p class="card-title">Field Fix </p>
+                <p class="card-title">Field Fix</p>
                 <p class="card-text">Dispatched technicians do the repairs under strict public SLA windows.</p>
             </div>
             <div class="card">
@@ -71,38 +68,105 @@
                 <p class="card-title">Proof & Close</p>
                 <p class="card-text">Before/after photos published openly so everyone sees the resolution.</p>
             </div>
-            </section>
-            <section>
+        </div>
+        <section>
+            <div class="section-head">
                 <div>
-                    <h2>Recent Community Reports</h2>
-                    <p>Verified reports lodged in Jakarta and surrounding regions</p>
+                    <h2 class="section-title">Recent Community Reports</h2>
+                    <p class="section-sub">Verified reports lodged in Jakarta and surrounding regions</p>
                 </div>
-                <div>
-                    <p>View live feed</p>
-                </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <img src="assets/img/img1.png" alt="report PAM pipeline burst">
-                        <div class="card-header">
-                            <div class="badges"><img src="review.svg" alt="">In Review</div>
-                            <p class="unique-code">CMP-2026-8841</p>
+                <a href="liveFeed.html" class="link-green">View live feed</a>
+            </div>
+            <div class="card-grid card-grid-2 card-grid-flush">
+                <div class="card card-row card-compact">
+                    <img class="card-img" src="assets/img/img1.png" alt="report PAM pipeline burst">
+                    <div class="card-body">
+                        <div class="card-top">
+                            <span class="badge badge-review"><img class="icon" src="assets/review.svg" alt="icon review">In review</span>
+                            <span class="card-code">CMP-2026-8841</span>
                         </div>
-                        <div class="card-title">
-                            <h3>PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT
-                            </h3>
-                        </div>
-                        <div class="card-description">
-                            <p><img src="assets/maps.svg" alt="icon maps">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT
-                                Cipete Raya)</p>
-                        </div>
-                        <div class="card-button">
-                            <button class="btn-likes"><img src="assets/i-thumbs-up.svg"
-                                    alt="thumbs up icon">148</button>
-                            <a href="#Inspect">Inspect</a>
+                        <p class="card-title-sm">PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT</p>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)</p>
+                        <div class="card-footer">
+                            <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="thumbs up icon">148</button>
+                            <a href="#Inspect" class="link-green">Inspect</a>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="card card-row card-compact">
+                    <img class="card-img" src="assets/img/img2.png" alt="report asphalt cavity">
+                    <div class="card-body">
+                        <div class="card-top">
+                            <span class="badge badge-assigned">
+                                <img class="icon" src="assets/assigned.svg" alt="icon assigned">
+                                Assigned
+                            </span>
+                            <span class="card-code">CMP-2026-8819</span>
+                        </div>
+                        <p class="card-title-sm">Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage</p>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)</p>
+                        <div class="card-footer">
+                            <button class="btn-likes"><img src="assets/i-thumbs-up.svg" alt="thumbs up icon">92</button>
+                            <a href="#Inspect" class="link-green">Inspect</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-row card-compact">
+                    <img class="card-img" src="assets/img/img3.png" alt="report streetlight outage">
+                    <div class="card-body">
+                        <div class="card-top">
+                            <span class="badge">
+                                <img class="icon" src="assets/resolved.svg" alt="icon resolved">
+                                Resolved
+                            </span>
+
+                            <span class="card-code">CMP-2026-8794</span>
+                        </div>
+
+                        <p class="card-title-sm">
+                            Complete PJU streetlight outage spanning 300 meters along residential corridor
+                        </p>
+
+                        <p class="card-location">
+                            <img class="icon" src="assets/maps.svg" alt="icon maps">
+                            Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03
+                        </p>
+
+                        <div class="card-footer">
+                            <button class="btn-likes" disabled>
+                                <img src="assets/i-thumbs-up.svg" alt="thumbs up icon">
+                                64
+                            </button>
+
+                            <a href="#Inspect" class="link-green">Inspect</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-row card-compact">
+                    <img class="card-img" src="assets/img/img4.png" alt="report trash accumulation">
+
+                    <div class="card-body">
+                        <div class="card-top">
+                            <span class="badge badge-review">
+                                <img class="icon" src="assets/review.svg" alt="icon review">
+                                In review
+                            </span>
+                            <span class="card-code">CMP-2026-8720</span>
+                        </div>
+                        <p class="card-title-sm">Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang</p>
+                        <p class="card-location"><img class="icon" src="assets/maps.svg" alt="icon maps">Kampung Kemang, RT 02 / RW 01 (bantaran Kali Krukut)</p>
+                        <div class="card-footer">
+                            <button class="btn-likes">
+                                <img src="assets/i-thumbs-up.svg" alt="thumbs up icon">
+                                78
+                            </button>
+                            <a href="#Inspect" class="link-green">Inspect</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
