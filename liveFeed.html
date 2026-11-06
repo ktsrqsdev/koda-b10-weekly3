@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,100..900,1;1,9..144,100..900,1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>WargaReport - Live Feed Page</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="navbar-logo"><img src="assets/logowr.svg" alt="logo warga report">WargaReport</a>
+            <ul class="navbar-menu">
+                <li><a class="navbar-link is-active" href="liveFeed.html" aria-current="page">Live Feed</a></li>
+                <li><a class="navbar-link" href="track.html">Track</a></li>
+                <li><a class="navbar-link" href="help.html">How it works</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="btn btn-ghost"><img src="assets/signin.svg" alt="">Sign In</button>
+                <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="">Report</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div>
+                <p class="eyebrow">Public Incident Registry</p>
+                <h1 class="heading-lg">Community Reports & Fixes</h1>
+                <p class="subheading-sm">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</p>
+            </div>
+            <div class="segmented" role="group" aria-label="View mode">
+                <button class="segmented-item is-active"><img class="icon" src="assets/list.svg" alt="icon list">Feed</button>
+                <button class="segmented-item"><img class="icon" src="assets/map.svg" alt="icon map">Map</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">WargaReport</p>
+                <p class="footer-text">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Citizens</h4>
+                <ul class="footer-links">
+                    <li><a href="#">File a report</a></li>
+                    <li><a href="#">Track complaint</a></li>
+                    <li><a href="#">Public reports registry</a></li>
+                    <li><a href="#">My filing history</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Agencies</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Participating bureaus</a></li>
+                    <li><a href="#">Officer triage queue</a></li>
+                    <li><a href="#">SLA benchmarks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Civic Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Help & FAQs</a></li>
+                    <li><a href="#">Evidence guidelines</a></li>
+                    <li><a href="#">PII & redaction policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 WargaReport. All rights reserved.</p>
+            <p class="UU">UU No. 25/2009 Compliant</p>
+        </div>
+    </footer>
 </body>
+
 </html>
