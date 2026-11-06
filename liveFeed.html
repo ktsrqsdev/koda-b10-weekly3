@@ -42,6 +42,38 @@
         </section>
     </main>
 
+    <section class="toolbar" aria-label="Filters">
+            <label class="search">
+                <img class="icon" src="assets/search.svg" alt="">
+                <input class="search-input" type="search" placeholder="Search by street name, complaint ID, or keyword...">
+            </label>
+            <div class="chip-row">
+                <button class="chip is-active">All Issues (6)</button>
+                <button class="chip"><img class="icon" src="assets/roads.svg" alt="icon roads and transit">Roads &amp; Transit</button>
+                <button class="chip"><img class="icon" src="assets/water.svg" alt="icon water and sewage">Water &amp; Sewage</button>
+                <button class="chip"><img class="icon" src="assets/lighting.svg" alt="icon street lighting">Street Lighting</button>
+                <button class="chip"><img class="icon" src="assets/waste.svg" alt="icon sanitation and waste">Sanitation &amp; Waste</button>
+                <button class="chip"><img class="icon" src="assets/parks.svg" alt="icon public parks and tress">Public Parks &amp; Trees</button>
+                <button class="chip"><img class="icon" src="assets/noise.svg" alt="">Noise &amp; Disturbance</button>
+                <button class="chip"><img class="icon" src="assets/building.svg" alt="">Building &amp; Zoning</button>
+            </div>
+            <div class="filter-bar">
+                <div class="segmented" role="group" aria-label="Status">
+                    <span class="segmented-label">Status:</span>
+                    <button class="segmented-item is-active">All</button>
+                    <button class="segmented-item">Submitted</button>
+                    <button class="segmented-item">Received</button>
+                    <button class="segmented-item">In review</button>
+                    <button class="segmented-item">Assigned</button>
+                    <button class="segmented-item">Awaiting your info</button>
+                    <button class="segmented-item">Resolved</button>
+                    <button class="segmented-item">Closed</button>
+                </div>
+                <label class="chip"><input type="checkbox">With photos/proof only</label>
+            </div>
+        </section>
+
+
     <footer class="footer">
         <div class="footer-grid">
             <div>
