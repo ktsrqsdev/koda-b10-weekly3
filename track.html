@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WargaReport - Track Page</title>
-</head>
-<body>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>WargaReport - Track Page</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="navbar-logo"><img src="assets/logowr.svg" alt="logo warga report">WargaReport</a>
+                <ul class="navbar-menu">
+                    <li><a class="navbar-link" href="liveFeed.html">Live Feed</a></li>
+                    <li><a class="navbar-link is-active" href="track.html" aria-current="page">Track</a></li>
+                    <li><a class="navbar-link" href="help.html">How it works</a></li>
+                </ul>
+                <div class="navbar-actions">
+                    <button class="btn btn-ghost"><img src="assets/signin.svg" alt="icon signin">Sign In</button>
+                    <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="icon add report">Report</button>
+                </div>
+            </nav>
+        </header>
+        <main class="split">
+            <section class="card card-lg">
+                <p class="form-title">Citizen Portal</p>
+                <h1 class="heading-lg">Track your complaint</h1>
+                <p class="subheading-sm">Enter your official case reference number to view real-time triage progress, inspector assignment, and official replies.</p>
+
+                <form class="form form-spaced" action="track.html" method="get">
+                    <div class="field">
+                        <label class="field-label" for="case-id">Complaint Reference ID</label>
+                        <input class="input input-mono" id="case-id" name="id" type="text" placeholder="e.g. CMP-2026-8841" required>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="contact">Email address or phone (optional verification)</label>
+                        <input class="input" id="contact" name="contact" type="text" placeholder="citizen@example.com">
+                    </div>
+                    <button class="btn btn-green btn-lg self-start" type="submit">
+                        <img src="assets/search-white.svg" alt="icon search">Lookup report status<img src="assets/i-arrow-right.svg" alt="icon arrow right">
+                    </button>
+                </form>
+
+                <hr class="line">
+                <p class="note">Try a sample record:
+                    <a class="link-mono" href="?id=CMP-2026-8841">CMP-2026-8841</a> &middot;
+                    <a class="link-mono" href="?id=CMP-2026-8794">CMP-2026-8794 (Resolved)</a>
+                </p>
+            </section>
+
+            <aside class="aside">
+                <div class="info">
+                    <img src="assets/help.svg" alt="icon help" class="help-icon">
+                    <div class="info-text">
+                        <p>Your tracking ID was displayed on your confirmation receipt and sent to your registered email address immediately upon intake.</p>
+                        <p>Reports filed anonymously can only be tracked using this unique key; officers cannot retrieve records by name without it.</p>
+                    </div>
+                </div>
+                <hr class="line">
+                <a class="link-green arrow-right" href="liveFeed.html">Lost your tracking ID? Search recent reports by location</a>
+            </aside>
+        </main>
+        <footer class="footer">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-brand">WargaReport</p>
+                    <p class="footer-text">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Citizens</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">File a report</a></li>
+                        <li><a href="#">Track complaint</a></li>
+                        <li><a href="#">Public reports registry</a></li>
+                        <li><a href="#">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Agencies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Participating bureaus</a></li>
+                        <li><a href="#">Officer triage queue</a></li>
+                        <li><a href="#">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Civic Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="#">Evidence guidelines</a></li>
+                        <li><a href="#">PII & redaction policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 WargaReport. All rights reserved.</p>
+                <p class="UU">UU No. 25/2009 Compliant</p>
+            </div>
+        </footer>
+    </body>
+
 </html>
