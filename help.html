@@ -1,12 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WargaReport - Help Page</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,100..900,1;1,9..144,100..900,1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <title>WargaReport - Help Page</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="navbar-logo">
+                    <img src="assets/logowr.svg" alt="logo warga report">WargaReport
+                </a>
+                <ul class="navbar-menu">
+                    <li><a class="navbar-link" href="liveFeed.html">Live Feed</a></li>
+                    <li><a class="navbar-link" href="track.html">Track</a></li>
+                    <li><a class="navbar-link" href="help.html">How it works</a></li>
+                </ul>
+                <div class="navbar-actions">
+                    <button class="btn btn-ghost"><img src="assets/signin.svg" alt="icon Signin">Sign In</button>
+                    <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="icon Add Report">Report</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="page-head">
+                <div>
+                    <p class="eyebrow">Citizen Help</p>
+                    <h1 class="heading-lg">How WargaReport Works</h1>
+                    <p class="subheading-sm">Everything you need to know about reporting civic issues, public countdown timers, and tracking city fixes.</p>
+                </div>
+            </section>
+            <div class="split split-flush">
+                <section>
+                    <h2 class="eyebrow eyebrow-spaced">Frequently Asked Questions</h2>
+                    <div class="stack stack-sm">
+                        <details class="accordion" name="faq" open>
+                            <summary class="accordion-summary">
+                                <span>
+                                    <span class="accordion-tag">How it works</span>
+                                    <span class="accordion-title">How does WargaReport get city issues fixed?</span>
+                                </span>
+                            </summary>
+                            <div class="accordion-body">
+                                <ol class="accordion-list">
+                                    <li>You spot an issue (pothole, water leak, dark street) and snap a photo.</li>
+                                    <li>WargaReport verifies the evidence and dispatches it directly to the responsible municipal agency (PAM JAYA, Bina Marga, Dishub, DLH, Satpol PP, Citata).</li>
+                                    <li>A public countdown starts. Neighbors can upvote the report to increase priority.</li>
+                                    <li>Field crews resolve the physical issue and post verification proof before closing.</li>
+                                </ol>
+                            </div>
+                        </details>
+                        <details class="accordion" name="faq">
+                            <summary class="accordion-summary">
+                                <span>
+                                    <span class="accordion-tag">Privacy (UU PDP)</span>
+                                    <span class="accordion-title">Will my name or contact info be visible to the public?</span>
+                                </span>
+                            </summary>
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur repellendus molestiae ab, nisi ratione explicabo dicta laudantium voluptatibus earum qui.</p>
+                            </div>
+                        </details>
+                        <details class="accordion" name="faq">
+                            <summary class="accordion-summary">
+                                <span>
+                                    <span class="accordion-tag">Account Mandatory</span>
+                                    <span class="accordion-title">Do I need an account to lodge a report or interact?</span>
+                                </span>
+                            </summary>
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur molestias architecto vitae magni aut dolore excepturi fugit recusandae ea!</p>
+                            </div>
+                        </details>
+                        <details class="accordion" name="faq">
+                            <summary class="accordion-summary">
+                                <span>
+                                    <span class="accordion-tag">Escalation</span>
+                                    <span class="accordion-title">What happens if an agency ignores or delays the report?</span>
+                                </span>
+                            </summary>
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, vel rerum? Alias, non? Quas sequi sed aut, ab eos officia.</p>
+                            </div>
+                        </details>
+                        <details class="accordion" name="faq">
+                            <summary class="accordion-summary">
+                                <span>
+                                    <span class="accordion-tag">Notifications</span>
+                                    <span class="accordion-title">Can I get status alerts sent to my WhatsApp or Email?</span>
+                                </span>
+                            </summary>
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequuntur reiciendis dolorum animi sapiente odio voluptas facilis quaerat dolores adipisci.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+                <div class="stack">
+                    <section class="card card-md">
+                        <p class="eyebrow">Status Meanings</p>
+                        <h2 class="section-title">What does each status mean?</h2>
+                        <ul class="status-list">
+                            <li class="status-item">
+                                <span class="badge badge-submitted"><img src="assets/submitted.svg" alt="">Submitted</span>
+                                <p class="description">Your report was submitted and received by our intake router.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-received"><img src="assets/received.svg" alt="">Received</span>
+                                <p class="description">Verified by WargaReport and queued for agency dispatch.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-review"><img src="assets/review.svg" alt="">In review</span>
+                                <p class="description">Agency coordinators are assessing field safety and equipment.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-assigned"><img src="assets/assigned.svg" alt="">Assigned</span>
+                                <p class="description">A field crew or technician is dispatched to the street.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-awaiting"><img src="assets/awaiting.svg" alt="">Awaiting your info</span>
+                                <p class="description">Inspector needs clarification or an updated photo.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-resolved"><img src="assets/resolved.svg" alt="">Resolved</span>
+                                <p class="description">Physical fix completed and inspection statement published.</p>
+                            </li>
+                            <li class="status-item">
+                                <span class="badge badge-closed"><img src="assets/closed.svg" alt="">Closed</span>
+                                <p class="description">Case completed and archived.</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="alert">
+                        <p class="alert-title"><img src="assets/phone.svg" alt="">Is this an acute life-safety emergency?</p>
+                        <p class="description">WargaReport is for non-urgent municipal infrastructure. If there is an active fire, medical crisis, or immediate hazard to life:</p>
+                        <div class="chip-row">
+                            <button class="alert-button" href="tel:112">Call 112 (National Emergency)</button>
+                            <button class="alert-button" href="tel:113">Call 113 (Fire Dispatch)</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-brand">WargaReport</p>
+                    <p class="footer-text">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Citizens</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">File a report</a></li>
+                        <li><a href="#">Track complaint</a></li>
+                        <li><a href="#">Public reports registry</a></li>
+                        <li><a href="#">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Agencies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Participating bureaus</a></li>
+                        <li><a href="#">Officer triage queue</a></li>
+                        <li><a href="#">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Civic Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="#">Evidence guidelines</a></li>
+                        <li><a href="#">PII & redaction policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 WargaReport. All rights reserved.</p>
+                <p class="UU">UU No. 25/2009 Compliant</p>
+            </div>
+        </footer>
+    </body>
+
 </html>
