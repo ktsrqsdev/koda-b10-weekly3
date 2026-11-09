@@ -2,20 +2,20 @@
     --font-f: "Fraunces", serif;
     --font-ps: "Public Sans", sans-serif;
     --font-pm: "IBM Plex Mono", monospace;
-    
+
     --gutter: 76.5px;
     --pd: 0 var(--gutter);
-    
+
     --bg-primary: #f7f2e7;
     --bd-primary: #d7cbb6;
     --bg-secondary: #fffdf8;
     --bd-secondary: #e8e0d1;
 
-    --btn-alert: #FFFDF8;
-    --bg-alert: #F9EAE5;
-    --bd-alert: 1px solid #A33F3147;
-    --txt-alert: #A33F31;
-    
+    --btn-alert: #fffdf8;
+    --bg-alert: #f9eae5;
+    --bd-alert: 1px solid #a33f3147;
+    --txt-alert: #a33f31;
+
     --disabled: #4c5b52;
     --disabled2: #84928a;
     --dark: #13231b;
@@ -24,28 +24,28 @@
     --success: #0f6b4f;
     --light-green: #e6f2eb;
     --danger: #9b2f1f;
-    
-    --bg-submitted: #F4EFE4;
-    --bd-submitted: 1px solid #E8E0D1;
-    --txt-submitted: #4C5B52;
-    --bg-received: #E6F2EB;
-    --bd-received: 1px solid #0F6B4F40;
-    --txt-received: #0F6B4F;
-    --bg-review: #FBF1D8;
-    --bd-review: 1px solid #96680F40;
-    --txt-review: #96680F;
-    --bg-assigned: #E8F1F5;
-    --bd-assigned: 1px solid #2F607E40;
-    --txt-assigned: #2F607E;
-    --bg-awaiting: #FBF1D8;
-    --bd-awaiting: 1px solid #96680F40;
-    --txt-awaiting: #96680F;
-    --bg-resolved: #E5F3EA;
-    --bd-resolved: 1px solid #217A5140;
-    --txt-resolved: #217A51;
-    --bg-closed: #F4EFE4;
-    --bd-closed: 1px solid #E8E0D1;
-    --txt-closed: #84928A;
+
+    --bg-submitted: #f4efe4;
+    --bd-submitted: 1px solid #e8e0d1;
+    --txt-submitted: #4c5b52;
+    --bg-received: #e6f2eb;
+    --bd-received: 1px solid #0f6b4f40;
+    --txt-received: #0f6b4f;
+    --bg-review: #fbf1d8;
+    --bd-review: 1px solid #96680f40;
+    --txt-review: #96680f;
+    --bg-assigned: #e8f1f5;
+    --bd-assigned: 1px solid #2f607e40;
+    --txt-assigned: #2f607e;
+    --bg-awaiting: #fbf1d8;
+    --bd-awaiting: 1px solid #96680f40;
+    --txt-awaiting: #96680f;
+    --bg-resolved: #e5f3ea;
+    --bd-resolved: 1px solid #217a5140;
+    --txt-resolved: #217a51;
+    --bg-closed: #f4efe4;
+    --bd-closed: 1px solid #e8e0d1;
+    --txt-closed: #84928a;
 }
 
 * {
@@ -248,7 +248,7 @@ body {
     align-items: center;
     gap: 4px;
     padding: 2px 8px;
-    border:var(--bd-resolved);
+    border: var(--bd-resolved);
     border-radius: 999px;
     font-family: var(--font-ps);
     font-size: 11px;
@@ -296,7 +296,7 @@ body {
 
 .badge-closed {
     background-color: var(--bg-closed);
-    border: var(--bd-closed) ;
+    border: var(--bd-closed);
     color: var(--txt-closed);
 }
 
@@ -363,6 +363,10 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.btn-link {
+    text-decoration: none;
 }
 
 .section-head {
@@ -736,7 +740,6 @@ body {
     color: #0f6b4f;
 }
 
-
 .is-active {
     border-color: var(--success);
     background-color: var(--success);
@@ -830,7 +833,7 @@ body {
 .description {
     font-family: var(--font-ps);
     font-size: 12px;
-    line-height: 19.2px;    
+    line-height: 19.2px;
     color: var(--disabled);
 }
 
@@ -868,6 +871,8 @@ body {
     color: var(--disabled);
 }
 
+/* Help Page */
+
 .stack {
     display: flex;
     flex-direction: column;
@@ -878,7 +883,6 @@ body {
     gap: 10px;
 }
 
-/* .split yang tepat di bawah .page-head */
 .split-flush {
     margin-top: 0;
 }
@@ -890,8 +894,6 @@ body {
 .card-md {
     padding: 23px;
 }
-
-/* ---------- HELP: faq accordion ---------- */
 
 .accordion {
     overflow: hidden;
@@ -965,8 +967,6 @@ body {
     list-style: decimal inside;
 }
 
-/* ---------- HELP: status legend ---------- */
-
 .status-list {
     display: flex;
     flex-direction: column;
@@ -979,9 +979,6 @@ body {
     align-items: flex-start;
     gap: 8px;
 }
-
-
-/* ---------- HELP: emergency alert ---------- */
 
 .alert {
     display: flex;
@@ -1014,4 +1011,134 @@ body {
     font-size: 10px;
     color: var(--txt-alert);
     text-decoration: none;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    border: 1px solid var(--bd-primary);
+    border-radius: 12px;
+    background-color: var(--bg-secondary);
+}
+
+.input-group:focus-within {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 18%, transparent);
+}
+
+.input-bare {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: var(--font-ps);
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.input-bare::placeholder {
+    color: #8f9a93;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.field-hint {
+    font-family: var(--font-ps);
+    font-size: 10.5px;
+    color: var(--disabled);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* signin */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: color-mix(in srgb, var(--dark) 72%, transparent);
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+body:has(.modal-overlay:target) {
+    overflow: hidden;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+}
+
+.modal {
+    position: relative;
+    width: min(540px, 100%);
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid var(--bd-secondary);
+    border-radius: 18px;
+    background-color: var(--bg-secondary);
+    color: var(--dark);
+    box-shadow: 0 24px 60px color-mix(in srgb, var(--dark) 30%, transparent);
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 22px 16px;
+    border-bottom: 1px solid var(--bd-secondary);
+}
+
+.modal-close {
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--disabled);
+}
+
+.modal-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--bd-secondary);
+    background-color: var(--bg-primary);
+}
+
+.modal-tab {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background-color: var(--submitted-bg);
+    font-family: var(--font-ps);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.modal-body {
+    padding: 18px 22px 22px;
 }

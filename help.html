@@ -21,11 +21,11 @@
                 <ul class="navbar-menu">
                     <li><a class="navbar-link" href="liveFeed.html">Live Feed</a></li>
                     <li><a class="navbar-link" href="track.html">Track</a></li>
-                    <li><a class="navbar-link" href="help.html">How it works</a></li>
+                    <li><a class="navbar-link is-active" href="help.html">How it works</a></li>
                 </ul>
                 <div class="navbar-actions">
-                    <button class="btn btn-ghost"><img src="assets/signin.svg" alt="icon Signin">Sign In</button>
-                    <button class="btn btn-green"><img src="assets/btn-plus.svg" alt="icon Add Report">Report</button>
+                    <a class="btn btn-ghost btn-link" href="#signin"><img src="assets/signin.svg" alt="icon Signin">Sign In</a>
+                    <a class="btn btn-green"><img src="assets/btn-plus.svg" alt="icon Add Report">Report</a>
                 </div>
             </nav>
         </header>
@@ -187,6 +187,94 @@
                 <p class="UU">UU No. 25/2009 Compliant</p>
             </div>
         </footer>
+        <div class="modal-overlay" id="signin">
+            <a class="modal-backdrop" href="#close"></a>
+            <div class="modal" role="dialog">
+                <div class="modal-head">
+                    <div>
+                        <h2 class="section-title" id="signin-title">Sign In to WargaReport</h2>
+                        <p class="note">Sign in to lodge a complaint or upvote issues.</p>
+                    </div>
+                    <a class="modal-close" href="#close">&times;</a>
+                </div>
+                <div class="modal-tabs">
+                    <a class="modal-tab is-active" href="#signin">Sign In Existing Account</a>
+                    <a class="modal-tab" href="#register">Register as Citizen</a>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="field">
+                            <label class="field-label" for="signin-email">Email Address</label>
+                            <div class="input-group">
+                                <img src="assets/mail.svg" alt="">
+                                <input class="input-bare" id="signin-email" type="email" placeholder="Enter your Email">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="signin-password">Password</label>
+                            <div class="input-group">
+                                <img src="assets/lock.svg" alt="">
+                                <input class="input-bare" id="signin-password" type="password" placeholder="Enter your password">
+                                <img src="assets/eye.svg" alt="">
+                            </div>
+                        </div>
+                        <button class="btn btn-green btn-lg btn-block" type="button">Sign In<img src="assets/i-arrow-right.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="register">
+            <a class="modal-backdrop" href="#close"></a>
+            <div class="modal" role="dialog">
+                <div class="modal-head">
+                    <div>
+                        <h2 class="section-title" id="register-title">Register Citizen Account</h2>
+                        <p class="note">Create an account to lodge a complaint or upvote issues.</p>
+                    </div>
+                    <a class="modal-close" href="#close">&times;</a>
+                </div>
+                <div class="modal-tabs">
+                    <a class="modal-tab" href="#signin">Sign In Existing Account</a>
+                    <a class="modal-tab is-active" href="#register">Register as Citizen</a>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="field">
+                            <label class="field-label" for="reg-name">Full Name (Nama Lengkap) *</label>
+                            <div class="input-group">
+                                <img src="assets/user.svg" alt="">
+                                <input class="input-bare" id="reg-name" type="text" placeholder="e.g. Budi Santoso">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field">
+                                <label class="field-label" for="reg-email">Email Address *</label>
+                                <input class="input" id="reg-email" type="email" placeholder="e.g. budi@wargareport.id">
+                            </div>
+                            <div class="field">
+                                <label class="field-label" for="reg-phone">Phone / WhatsApp *</label>
+                                <input class="input" id="reg-phone" type="tel" placeholder="+62 812 ...">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="reg-nik">NIK</label>
+                            <input class="input input-mono" id="reg-nik" type="text" placeholder="16 digits for verified resident badge (e.g. 3174...)">
+                            <p class="field-hint">Used exclusively for verification under UU PDP and never shown to the public.</p>
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="reg-password">Password *</label>
+                            <div class="input-group">
+                                <img src="assets/lock.svg" alt="">
+                                <input class="input-bare" id="reg-password" type="password" placeholder="Create a password">
+                                <img src="assets/eye.svg" alt="">
+                            </div>
+                        </div>
+                        <button class="btn btn-green btn-lg btn-block" type="button"><img src="assets/shield-check.svg" alt="">Create Account &amp; Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
 </html>
