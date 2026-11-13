@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WargaReport - Account</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <body class="bg-(--bg-primary) font-(family-name:--font-ps) text-(--dark) antialiased">
+        <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
+            <nav class="mx-auto flex h-17 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:px-(--gutter)">
+                <a href="index.html" class="flex items-center gap-2 font-(family-name:--font-f) text-[19px] font-bold tracking-tight">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="3.3449" width="32" height="32" rx="10" transform="rotate(-5.99997 0 3.3449)" fill="#0F6B4F" />
+                        <path d="M17.0964 14.9959L18.1428 15.079L16.6836 22.3192C16.6498 22.4568 16.6261 22.588 16.6124 22.7128C16.604 22.837 16.6087 22.984 16.6265 23.1537L16.66 23.472C16.675 23.6152 16.6443 23.731 16.5678 23.8195C16.496 23.9021 16.3965 23.9501 16.2692 23.9635L13.9619 24.206C13.8293 24.2199 13.7167 24.1942 13.624 24.1289C13.5361 24.0577 13.4846 23.9505 13.4695 23.8073L13.4361 23.489C13.4255 23.3883 13.4083 23.3016 13.3846 23.229C13.3604 23.1511 13.3157 23.0325 13.2507 22.873L9.9238 14.9454C9.85823 14.7807 9.78441 14.6651 9.70234 14.5986C9.62503 14.5263 9.51993 14.4703 9.38706 14.4307L9.06506 14.3519C8.94922 14.3212 8.86324 14.2685 8.80714 14.194C8.75104 14.1194 8.71798 14.0344 8.70794 13.9389C8.69345 13.801 8.72738 13.6902 8.80975 13.6065C8.89686 13.5169 9.03589 13.4621 9.22684 13.442L13.3004 13.0138C13.4967 12.9932 13.644 13.0179 13.7426 13.088C13.8406 13.1528 13.8968 13.2542 13.9113 13.3921C13.933 13.5989 13.8414 13.748 13.6365 13.8392L13.2559 13.9677C13.1272 14.0188 13.0562 14.1094 13.0431 14.2394C13.0294 14.3642 13.0685 14.5317 13.1603 14.742L16.3226 22.4054L15.4088 23.2013L17.0964 14.9959ZM22.3218 12.5161C22.3067 12.3729 22.3404 12.2594 22.4228 12.1757C22.5099 12.0861 22.6489 12.0313 22.8399 12.0112L25.2267 11.7603C25.423 11.7397 25.5704 11.7644 25.6689 11.8345C25.7727 11.9041 25.8319 12.0078 25.8464 12.1457C25.857 12.2465 25.8391 12.3315 25.7927 12.4007C25.7464 12.4699 25.6573 12.5409 25.5256 12.6138L25.2827 12.7519C25.1059 12.8563 24.9626 12.9974 24.8526 13.1752C24.7473 13.3471 24.6668 13.6023 24.6112 13.9406L23.3191 21.6218C23.2866 21.8236 23.2654 21.9787 23.2553 22.087C23.2453 22.1953 23.2475 22.3184 23.262 22.4563L23.2954 22.7746C23.3105 22.9178 23.2797 23.0336 23.2032 23.1221C23.1315 23.2047 23.032 23.2527 22.9047 23.2661L20.5258 23.5161C20.3985 23.5295 20.2885 23.5035 20.1958 23.4382C20.1026 23.3675 20.0484 23.2606 20.0334 23.1174L19.9999 22.7992C19.9905 22.709 19.9762 22.6247 19.9573 22.5462C19.9377 22.4625 19.8925 22.3385 19.8217 22.1744L16.607 14.2429C16.5146 14.0274 16.4409 13.8877 16.386 13.8237C16.3304 13.7545 16.2559 13.7087 16.1624 13.6864L15.8395 13.5996C15.7184 13.5695 15.6306 13.5251 15.5762 13.4664C15.5217 13.4078 15.4895 13.3308 15.4795 13.2353C15.4644 13.0921 15.4981 12.9786 15.5805 12.8949C15.6676 12.8053 15.8066 12.7504 15.9975 12.7304L19.9438 12.3156C20.1401 12.295 20.2875 12.3197 20.386 12.3898C20.484 12.4546 20.5405 12.5586 20.5555 12.7018C20.5667 12.8078 20.5467 12.8984 20.4956 12.9735C20.4498 13.048 20.3655 13.1132 20.2427 13.169L19.9018 13.2933C19.7784 13.3438 19.7061 13.4212 19.6848 13.5253C19.6689 13.6289 19.7088 13.8043 19.8045 14.0517L22.8794 21.7243L22.0577 22.4783L23.5317 13.9254C23.5734 13.6582 23.5564 13.4455 23.4807 13.2872C23.4051 13.1289 23.2376 13.0151 22.9783 12.9459L22.6668 12.8901C22.5562 12.8588 22.4738 12.8139 22.4193 12.7552C22.3643 12.6913 22.3318 12.6116 22.3218 12.5161Z" fill="white" />
+                    </svg>
+                    WargaReport
+                </a>
+
+                <!-- Menu desktop -->
+                <ul class="hidden items-center gap-2 lg:flex">
+                    <li><a href="liveFeed.html" class="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-(--disabled) hover:text-(--dark)">Live Feed</a></li>
+                    <li><a href="track.html" class="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-(--disabled) hover:text-(--dark)">Track</a></li>
+                    <li><a href="help.html" class="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-(--disabled) hover:text-(--dark)">How it works</a></li>
+                    <li data-masuk hidden><a href="account-complaints.html" class="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium bg-(--success) text-(--light)">My Reports</a></li>
+                </ul>
+                <div class="hidden items-center justify-end gap-3 lg:flex xl:gap-4">
+                    <a data-tamu href="#signin" class="cursor-pointer inline-flex items-center justify-center gap-1.75 whitespace-nowrap rounded-full border font-semibold py-2.5 text-xs border-transparent bg-transparent text-(--disabled)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2_191)">
+                                <path d="M7.5 1.5H9.5C9.76522 1.5 10.0196 1.60536 10.2071 1.79289C10.3946 1.98043 10.5 2.23478 10.5 2.5V9.5C10.5 9.76522 10.3946 10.0196 10.2071 10.2071C10.0196 10.3946 9.76522 10.5 9.5 10.5H7.5" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                <path d="M5 8.5L7.5 6L5 3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                <path d="M7.5 6H1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2_191">
+                                    <rect width="12" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Sign In
+                    </a>
+                    <a data-masuk hidden href="notifications.html" class="relative p-1" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_700)">
+                                <path d="M12.75 5.66675C12.75 4.53958 12.3022 3.45857 11.5052 2.66154C10.7082 1.86451 9.62717 1.41675 8.5 1.41675C7.37283 1.41675 6.29183 1.86451 5.4948 2.66154C4.69777 3.45857 4.25 4.53958 4.25 5.66675C4.25 10.6251 2.125 12.0417 2.125 12.0417H14.875C14.875 12.0417 12.75 10.6251 12.75 5.66675Z" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                <path d="M9.72543 14.875C9.6009 15.0897 9.42215 15.2679 9.20709 15.3918C8.99203 15.5156 8.7482 15.5808 8.50001 15.5808C8.25183 15.5808 8.008 15.5156 7.79294 15.3918C7.57788 15.2679 7.39913 15.0897 7.2746 14.875" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_700">
+                                    <rect width="17" height="17" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span data-titik class="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full bg-(--success)"></span></a>
+                    <details data-masuk hidden class="group relative">
+                        <summary class="flex cursor-pointer list-none items-center gap-2 rounded-full border border-(--bd-primary) bg-(--bg-secondary) py-1 pl-1 pr-3.5 [&::-webkit-details-marker]:hidden">
+                            <span data-inisial class="grid h-7 w-7 place-items-center rounded-full bg-(--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(--success)">FS</span>
+                            <span class="hidden flex-col whitespace-nowrap text-xs font-semibold leading-tight xl:flex"><span data-nama>Fahrul Septiana</span><span class="font-(family-name:--font-pm) text-[9px] font-normal uppercase text-(--disabled)">Citizen</span></span>
+                            <svg class="h-4 w-4 text-(--disabled) transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5 8l5 5 5-5" />
+                            </svg>
+                        </summary>
+                        <div class="absolute right-0 z-40 mt-2 w-57.5 rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) p-1.5 shadow-lg">
+                            <div class="border-b border-(--bd-secondary) px-3 py-2.5">
+                                <p data-nama class="text-[13px] font-semibold">Fahrul Septiana</p>
+                                <p data-email class="text-[11px] text-(--disabled)">fahrul@wargareport.id</p>
+                            </div>
+                            <a href="account-complaints.html" class="mt-1 flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-medium hover:bg-(--bg-primary)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_601_272)">
+                                        <path d="M10 10.5V9.5C10 8.96957 9.78929 8.46086 9.41421 8.08579C9.03914 7.71071 8.53043 7.5 8 7.5H4C3.46957 7.5 2.96086 7.71071 2.58579 8.08579C2.21071 8.46086 2 8.96957 2 9.5V10.5" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                        <path d="M8 3.5C8 4.60457 7.10457 5.5 6 5.5C4.89543 5.5 4 4.60457 4 3.5C4 2.39543 4.89543 1.5 6 1.5C7.10457 1.5 8 2.39543 8 3.5Z" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_601_272">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                My Filed Reports</a>
+                            <a data-keluar href="index.html" class="flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-medium text-(--txt-alert) hover:bg-(--bg-primary)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_601_279)">
+                                        <path d="M4.5 10.5H2.5C2.23478 10.5 1.98043 10.3946 1.79289 10.2071C1.60536 10.0196 1.5 9.76522 1.5 9.5V2.5C1.5 2.23478 1.60536 1.98043 1.79289 1.79289C1.98043 1.60536 2.23478 1.5 2.5 1.5H4.5" stroke-linecap="round" stroke-linejoin="round" stroke="#A33F31" />
+                                        <path d="M8 8.5L10.5 6L8 3.5" stroke-linecap="round" stroke-linejoin="round" stroke="#A33F31" />
+                                        <path d="M10.5 6H4.5" stroke-linecap="round" stroke-linejoin="round" stroke="#A33F31" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_601_279">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Sign Out</a>
+                        </div>
+                    </details>
+                    <a href="report-topic.html" class="cursor-pointer inline-flex shrink-0 items-center justify-center gap-1.75 whitespace-nowrap rounded-full border font-semibold px-5 py-2.5 text-xs border-(--success) bg-(--success) text-(--light)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_694)">
+                                <path d="M6 2.5V9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                                <path d="M2.5 6H9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_694">
+                                    <rect width="12" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Report an Issue</a>
+                </div>
+
+                <!-- Menu mobile: logo + hamburger -->
+                <details class="group relative lg:hidden">
+                    <summary aria-label="Menu" class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
+                        <svg class="h-5 w-5 group-open:hidden" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M3 5h14M3 10h14M3 15h14" />
+                        </svg>
+                        <svg class="hidden h-5 w-5 group-open:block" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M5 5l10 10M15 5L5 15" />
+                        </svg>
+                    </summary>
+                    <div class="absolute right-0 z-40 mt-2 w-64 rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) p-2 shadow-lg">
+                        <a href="liveFeed.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--disabled) hover:bg-(--bg-primary)">Live Feed</a>
+                        <a href="track.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--disabled) hover:bg-(--bg-primary)">Track</a>
+                        <a href="help.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--disabled) hover:bg-(--bg-primary)">How it works</a>
+                        <a href="account-complaints.html" data-masuk hidden class="block rounded-lg px-3 py-2.5 text-sm font-medium bg-(--success) text-(--light)">My Reports</a>
+                        <div data-masuk hidden class="mt-1 border-t border-(--bd-secondary) pt-1">
+                            <div class="px-3 py-2.5">
+                                <p data-nama class="text-[13px] font-semibold">Fahrul Septiana</p>
+                                <p data-email class="text-[11px] text-(--disabled)">fahrul@wargareport.id</p>
+                            </div>
+                            <a href="notifications.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--disabled) hover:bg-(--bg-primary)">Notifications</a>
+                            <a data-keluar href="index.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--txt-alert) hover:bg-(--bg-primary)">Sign Out</a>
+                        </div>
+                        <a data-tamu href="#signin" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-(--disabled) hover:bg-(--bg-primary)">Sign In</a>
+                        <a href="report-topic.html" class="mt-2 flex cursor-pointer items-center justify-center gap-1.75 rounded-full border font-semibold px-5 py-2.5 text-xs border-(--success) bg-(--success) text-(--light)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_601_243)">
+                                    <path d="M6 2.5V9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                                    <path d="M2.5 6H9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_601_243">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Report an Issue</a>
+                    </div>
+                </details>
+            </nav>
+        </header>
+        <main class="mx-auto w-full max-w-7xl px-5 md:px-(--gutter) pb-4 pt-12">
+            <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-widest text-(--disabled)">Citizen Management</p>
+            <h1 class="mb-2 font-(family-name:--font-f) text-[38px] font-semibold leading-[1.1]">Account &amp; Case History</h1>
+            <nav class="mt-4 flex flex-wrap gap-1.5" aria-label="Account sections"><a href="account-complaints.html" class="rounded-full px-3.5 py-1.5 text-xs font-medium bg-(--success) text-(--light)">My complaints</a><a href="account-profile.html" class="rounded-full px-3.5 py-1.5 text-xs font-medium text-(--disabled) hover:text-(--dark)">Profile</a><a href="account-notifications.html" class="rounded-full px-3.5 py-1.5 text-xs font-medium text-(--disabled) hover:text-(--dark)">Notifications</a><a href="account-privacy.html" class="rounded-full px-3.5 py-1.5 text-xs font-medium text-(--disabled) hover:text-(--dark)">Privacy &amp; data</a><a href="account-security.html" class="rounded-full px-3.5 py-1.5 text-xs font-medium text-(--disabled) hover:text-(--dark)">Security</a></nav>
+            <div class="mt-6">
+                <div class="mb-3 flex items-center justify-between gap-3">
+                    <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(--disabled)">Your tracked records (2)</p>
+                    <a href="report-topic.html" class="cursor-pointer inline-flex items-center justify-center gap-1.75 rounded-full border font-semibold px-5 py-2.5 text-xs border-(--success) bg-(--success) text-(--light)">+ File new complaint</a>
+                </div>
+                <div class="overflow-x-auto rounded-[18px] border border-(--bd-secondary) bg-(--bg-secondary)">
+                    <table class="w-full min-w-205 text-left">
+                        <thead>
+                            <tr class="border-b border-(--bd-secondary) bg-(--bg-primary) font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(--disabled)">
+                                <th class="px-5 py-2.5 font-medium">Case ID</th>
+                                <th class="px-5 py-2.5 font-medium">Title / Location</th>
+                                <th class="px-5 py-2.5 font-medium">Agency</th>
+                                <th class="px-5 py-2.5 font-medium">Status</th>
+                                <th class="px-5 py-2.5 font-medium">SLA Target</th>
+                                <th class="px-5 py-2.5 font-medium">Last Update</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-(--bd-secondary)">
+                            <tr class="align-top">
+                                <td class="w-28 px-5 py-4 font-(family-name:--font-pm) text-[13px] font-semibold text-(--success)">CMP-2026-9472</td>
+                                <td class="px-5 py-4"><a href="report-detail.html" class="text-[13px] font-semibold leading-snug hover:text-(--success)">Pohon tumbang di depan Kebun Binatang samping Kampus ITB</a>
+                                    <p class="mt-1 flex gap-1.5 text-[11px] text-(--disabled)"><img src="assets/maps.svg" alt="">Jl. Tamansari depan Kebun Binatang</p>
+                                </td>
+                                <td class="px-5 py-4 text-xs">Dinas Pertamanan dan Hutan Kota Bandung</td>
+                                <td class="px-5 py-4"><span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(--bg-submitted) text-(--txt-submitted) [border:var(--bd-submitted)]"><img src="assets/submitted.svg" alt="" class="h-3 w-3">Submitted</span></td>
+                                <td class="px-5 py-4 font-(family-name:--font-pm) text-[11px]"><span class="text-(--disabled)">Awaiting verification</span></td>
+                                <td class="px-5 py-4 font-(family-name:--font-pm) text-[11px] text-(--disabled)">Oct 30</td>
+                            </tr>
+                            <tr class="align-top">
+                                <td class="w-28 px-5 py-4 font-(family-name:--font-pm) text-[13px] font-semibold text-(--success)">CMP-2026-8841</td>
+                                <td class="px-5 py-4"><a href="report-detail.html" class="text-[13px] font-semibold leading-snug hover:text-(--success)">PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT</a>
+                                    <p class="mt-1 flex gap-1.5 text-[11px] text-(--disabled)"><img src="assets/maps.svg" alt="">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)</p>
+                                </td>
+                                <td class="px-5 py-4 text-xs">Perumda PAM JAYA (Clean Drinking Water)</td>
+                                <td class="px-5 py-4"><span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(--bg-review) text-(--txt-review) [border:var(--bd-review)]"><img src="assets/review.svg" alt="" class="h-3 w-3">In review</span></td>
+                                <td class="px-5 py-4 font-(family-name:--font-pm) text-[11px]"><span class="inline-flex items-center gap-1.5 text-(--txt-alert)"><img src="assets/alert-clock.svg" alt="">Breached by 64h 2m</span></td>
+                                <td class="px-5 py-4 font-(family-name:--font-pm) text-[11px] text-(--disabled)">Oct 29</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <footer class="mt-20 border-t border-(--bd-primary) bg-(--bg-secondary)">
+            <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
+                <div class="sm:col-span-2 md:col-span-1">
+                    <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
+                    <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">Citizens</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">File a report</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Track complaint</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Public reports registry</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">Agencies</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">Participating bureaus</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Officer triage queue</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">Civic Trust</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">Help &amp; FAQs</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Evidence guidelines</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">PII &amp; redaction policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mx-auto max-w-7xl px-5 md:px-(--gutter)">
+                <div class="flex flex-col justify-between gap-2 border-t border-(--bd-secondary) py-5 text-[11px] text-(--disabled) sm:flex-row">
+                    <p>&copy; 2026 WargaReport. All rights reserved.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
