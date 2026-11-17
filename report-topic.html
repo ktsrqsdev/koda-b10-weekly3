@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WargaReport - Report an Issue</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WargaReport - Report an Issue</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
 
-<body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
-    <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
+    <body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
+        <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
             <nav class="mx-auto flex h-17 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:px-(--gutter)">
                 <a href="index.html" class="flex items-center gap-2 font-(family-name:--font-f) text-[19px] font-bold tracking-tight">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +152,7 @@
                 </details>
             </nav>
         </header>
-    <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) my-10 grid items-start gap-9 md:grid-cols-[260px_1fr]">
+        <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) my-10 grid items-start gap-9 md:grid-cols-[260px_1fr]">
             <aside class="flex flex-col gap-5">
                 <div>
                     <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Community Intake</p>
@@ -172,75 +172,198 @@
                 <a href="liveFeed.html" class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Cancel and return to feed</a>
             </aside>
 
-        <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8">
-            <div class="mb-[18px]">
-                <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Step 01 of 04</p>
-                <h2 class="font-(family-name:--font-f) text-[28px] font-semibold leading-[1.15]">What needs fixing?</h2>
-                <p class="text-xs leading-relaxed text-(color:--disabled)">Select the municipal service category that best matches the issue observed.</p>
-            </div>
+            <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8">
+                <div class="mb-[18px]">
+                    <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Step 01 of 04</p>
+                    <h2 class="font-(family-name:--font-f) text-[28px] font-semibold leading-[1.15]">What needs fixing?</h2>
+                    <p class="text-xs leading-relaxed text-(color:--disabled)">Select the municipal service category that best matches the issue observed.</p>
+                </div>
 
-            <div class="grid gap-3 sm:grid-cols-2">
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-roads.svg" alt="">Roads &amp; Transit<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Pothole / Sidewalk (Trotoar)</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Potholes, broken sidewalk slabs, damaged drainage grates</p>
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_529)">
+                                    <path d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M7.5 5.625V8.125" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M7.5 10.625H7.50625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_529">
+                                        <rect width="15" height="15" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Roads &amp; Transit<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Pothole / Sidewalk (Trotoar)</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Potholes, broken sidewalk slabs, damaged drainage grates</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_539)">
+                                    <path d="M7.5 1.6875L3.5625 5.625C2.98484 6.36312 2.62627 7.24874 2.52772 8.18084C2.42917 9.11293 2.59459 10.054 3.00512 10.8966C3.41566 11.7392 4.05476 12.4494 4.84953 12.9463C5.64429 13.4431 6.56271 13.7066 7.5 13.7066C8.43729 13.7066 9.35571 13.4431 10.1505 12.9463C10.9452 12.4494 11.5843 11.7392 11.9949 10.8966C12.4054 10.054 12.5708 9.11293 12.4723 8.18084C12.3737 7.24874 12.0152 6.36312 11.4375 5.625L7.5 1.6875Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_539">
+                                        <rect width="15" height="15" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Water &amp; Sewage<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">24h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Water Burst / Pipa Bocor</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Pipeline bursts, flooding tap leaks, dry taps</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_547)">
+                                    <path d="M10 7.5C10 8.88071 8.88071 10 7.5 10C6.11929 10 5 8.88071 5 7.5C5 6.11929 6.11929 5 7.5 5C8.88071 5 10 6.11929 10 7.5Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M7.5 1.25V2.5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M7.5 12.5V13.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M3.0625 3.0625L3.9375 3.9375" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M11.0625 11.0625L11.9375 11.9375" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M1.25 7.5H2.5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M12.5 7.5H13.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M3.9375 11.0625L3.0625 11.9375" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M11.9375 3.0625L11.0625 3.9375" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_547">
+                                        <rect width="15" height="15" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Street Lighting<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">72h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Dark Street / PJU Padam</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_563)">
+                                    <path d="M1.875 3.75H13.125" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M11.875 3.75L11.25 12.5C11.25 12.8315 11.1183 13.1495 10.8839 13.3839C10.6495 13.6183 10.3315 13.75 10 13.75H5C4.66848 13.75 4.35054 13.6183 4.11612 13.3839C3.8817 13.1495 3.75 12.8315 3.75 12.5L3.125 3.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M6.25 6.875V10.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M8.75 6.875V10.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                    <path d="M5.625 3.75V2.5C5.625 2.33424 5.69085 2.17527 5.80806 2.05806C5.92527 1.94085 6.08424 1.875 6.25 1.875H8.75C8.91576 1.875 9.07473 1.94085 9.19194 2.05806C9.30915 2.17527 9.375 2.33424 9.375 2.5V3.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_563">
+                                        <rect width="15" height="15" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Sanitation &amp; Waste<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">36h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Trash Pile / Sampah Liar</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--green) bg-(color:--light-green)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 1.25L4.6875 5.3125H10.3125L7.5 1.25Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M7.5 4.375L3.75 9.375H11.25L7.5 4.375Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M7.5 9.375V13.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            </svg>
+                            Public Parks &amp; Trees<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Hazardous Tree / Rawan Tumbang</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.875 3.125L3.75 5.625H1.25V9.375H3.75L6.875 11.875V3.125Z" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M9.6875 5.3125C10.0137 5.57614 10.2769 5.90941 10.4576 6.28791C10.6384 6.66641 10.7322 7.08055 10.7322 7.5C10.7322 7.91945 10.6384 8.33359 10.4576 8.71209C10.2769 9.09059 10.0137 9.42386 9.6875 9.6875" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M11.5625 3.4375C12.1543 3.93618 12.63 4.55813 12.9563 5.25985C13.2827 5.96157 13.4517 6.72611 13.4517 7.5C13.4517 8.27389 13.2827 9.03843 12.9563 9.74015C12.63 10.4419 12.1543 11.0638 11.5625 11.5625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            </svg>
+                            Noise &amp; Disturbance<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Late-night Noise / Ketertiban</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
+                    </div>
+                    <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="flex items-center gap-2 text-sm font-semibold">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.875 13.125H13.125" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M3.125 13.125V3.75L7.5 1.875V13.125" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M11.875 13.125V6.25L7.5 4.375" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M5 5H5.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M5 7.5H5.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M5 10H5.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M9.375 6.875H10" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                <path d="M9.375 9.375H10" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            </svg>
+                            Building &amp; Zoning<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">72h SLA</span>
+                        </div>
+                        <p class="text-[13px] font-medium">Unsafe Construction / Bangunan</p>
+                        <p class="text-xs leading-relaxed text-(color:--disabled)">Unsafe scaffolding, structural hazards, building boundary violations</p>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-water.svg" alt="">Water &amp; Sewage<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">24h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Water Burst / Pipa Bocor</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Pipeline bursts, flooding tap leaks, dry taps</p>
-                </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-lighting.svg" alt="">Street Lighting<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">72h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Dark Street / PJU Padam</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
-                </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-waste.svg" alt="">Sanitation &amp; Waste<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">36h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Trash Pile / Sampah Liar</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
-                </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--green) bg-(color:--light-green)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-parks.svg" alt="">Public Parks &amp; Trees<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Hazardous Tree / Rawan Tumbang</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
-                </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-noise.svg" alt="">Noise &amp; Disturbance<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">48h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Late-night Noise / Ketertiban</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
-                </div>
-                <div class="flex flex-col gap-1.5 rounded-[14px] border px-4 py-3.5 border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="flex items-center gap-2 text-sm font-semibold"><img src="assets/cat-building.svg" alt="">Building &amp; Zoning<span class="ml-auto rounded-full bg-(color:--light-green) px-2 py-0.5 font-(family-name:--font-pm) text-[10px] font-normal text-(color:--success)">72h SLA</span></div>
-                    <p class="text-[13px] font-semibold">Unsafe Construction / Bangunan</p>
-                    <p class="text-xs leading-relaxed text-(color:--disabled)">Unsafe scaffolding, structural hazards, building boundary violations</p>
-                </div>
-            </div>
 
-            <div class="mt-6 flex items-center justify-between">
-                <a href="liveFeed.html" class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Cancel</a>
-                <a href="report-location.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Continue</a>
+                <div class="mt-6 flex items-center justify-between">
+                    <a href="liveFeed.html" class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Cancel</a>
+                    <a href="report-location.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Continue
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_614)">
+                                <path d="M2.70831 6.5H10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                                <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_614">
+                                    <rect width="13" height="13" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
+            <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
+                <div class="sm:col-span-2 md:col-span-1">
+                    <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
+                    <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">File a report</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
-        <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
-            <div class="sm:col-span-2 md:col-span-1">
-                <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
-                <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
-                <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+            <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
+                <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
+                    <p>&copy; 2026 WargaReport. All rights reserved.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
+                </div>
             </div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">File a report</a></li><li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li><li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li><li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li><li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li><li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li><li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li><li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li></ul></div>
-        </div>
-        <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
-            <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
-                <p>&copy; 2026 WargaReport. All rights reserved.</p>
-                <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
