@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WargaReport - Report Receipt</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WargaReport - Report Receipt</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
 
-<body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
-    <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
+    <body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
+        <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
             <nav class="mx-auto flex h-17 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:px-(--gutter)">
                 <a href="index.html" class="flex items-center gap-2 font-(family-name:--font-f) text-[19px] font-bold tracking-tight">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
                         </svg>
                         Sign In
                     </a>
-                    <a data-masuk hidden href="notifications.html" class="relative p-1" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a data-masuk hidden href="notifications.html" class="relative p-1"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_214_700)">
                                 <path d="M12.75 5.66675C12.75 4.53958 12.3022 3.45857 11.5052 2.66154C10.7082 1.86451 9.62717 1.41675 8.5 1.41675C7.37283 1.41675 6.29183 1.86451 5.4948 2.66154C4.69777 3.45857 4.25 4.53958 4.25 5.66675C4.25 10.6251 2.125 12.0417 2.125 12.0417H14.875C14.875 12.0417 12.75 10.6251 12.75 5.66675Z" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
                                 <path d="M9.72543 14.875C9.6009 15.0897 9.42215 15.2679 9.20709 15.3918C8.99203 15.5156 8.7482 15.5808 8.50001 15.5808C8.25183 15.5808 8.008 15.5156 7.79294 15.3918C7.57788 15.2679 7.39913 15.0897 7.2746 14.875" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
@@ -114,7 +114,7 @@
 
                 <!-- tampilan mobile -->
                 <details class="group relative lg:hidden">
-                    <summary aria-label="Menu" class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
+                    <summary class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
                         <svg class="h-5 w-5 group-open:hidden" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                             <path d="M3 5h14M3 10h14M3 15h14" />
                         </svg>
@@ -152,45 +152,82 @@
                 </details>
             </nav>
         </header>
-    <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) py-12">
-        <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8 mx-auto max-w-[640px]">
-            <div class="flex items-center justify-between gap-3"><span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(color:--bg-submitted) text-(color:--txt-submitted) [border:var(--bd-submitted)]"><img src="assets/submitted.svg" alt="" class="h-3 w-3">Submitted</span><span class="font-(family-name:--font-pm) text-[11px] text-(color:--disabled)">Logged 04:41 PM</span></div>
-            <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(color:--dark) mt-6 text-(color:--disabled)">Official Tracking Reference</p>
-            <p class="mt-1 font-(family-name:--font-pm) text-[32px] font-semibold leading-tight text-(color:--success)">CMP-2026-9472</p>
-            <h1 class="mt-3 font-(family-name:--font-f) text-2xl font-semibold leading-snug">Pohon tumbang di depan Kebun Binatang samping Kampus ITB</h1>
-            <p class="text-xs leading-relaxed text-(color:--disabled) mt-1">Dinas Pertamanan dan Hutan Kota &middot; Jl. Tamansari depan Kebun Binatang</p>
-            <hr class="my-6 border-(color:--bd-secondary)">
-            <h2 class="font-(family-name:--font-f) text-xl font-semibold mb-3">What happens next</h2>
-            <ol class="flex flex-col gap-3">
-                <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">1</span><p class="text-[13px] leading-relaxed text-(color:--disabled)">Your report is awaiting evidence verification. Proposed bureau: Dinas Pertamanan dan Hutan Kota.</p></li>
-                <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">2</span><p class="text-[13px] leading-relaxed text-(color:--disabled)">A duty inspector will assess site urgency within the target 48-hour SLA window once routed.</p></li>
-                <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">3</span><p class="text-[13px] leading-relaxed text-(color:--disabled)">Status transitions and official statements will appear directly on your tracking page.</p></li>
-            </ol>
-            <div class="mt-7 flex flex-wrap gap-3">
-                <a href="report-detail.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Track report status</a>
-                <button type="button" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">Print receipt</button>
-                <a href="liveFeed.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">Back to feed</a>
+        <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) py-12">
+            <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8 mx-auto max-w-[640px]">
+                <div class="flex items-center justify-between gap-3">
+                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(color:--bg-submitted) text-(color:--txt-submitted) [border:var(--bd-submitted)]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                            <path d="M8 4.66675V8.00008L10.3333 9.33342" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                        </svg>
+                        Submitted
+                    </span>
+                    <span class="font-(family-name:--font-pm) text-[11px] text-(color:--disabled)">Logged 04:41 PM</span>
+                </div>
+                <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(color:--dark) mt-6 text-(color:--disabled)">Official Tracking Reference</p>
+                <p class="mt-1 font-(family-name:--font-pm) text-[32px] font-semibold leading-tight text-(color:--success)">CMP-2026-9472</p>
+                <h1 class="mt-3 font-(family-name:--font-f) text-2xl font-semibold leading-snug">Pohon tumbang di depan Kebun Binatang samping Kampus ITB</h1>
+                <p class="text-xs leading-relaxed text-(color:--disabled) mt-1">Dinas Pertamanan dan Hutan Kota &middot; Jl. Tamansari depan Kebun Binatang</p>
+                <hr class="my-6 border-(color:--bd-secondary)">
+                <h2 class="font-(family-name:--font-f) text-xl font-semibold mb-3">What happens next</h2>
+                <ol class="flex flex-col gap-3">
+                    <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">1</span>
+                        <p class="text-[13px] leading-relaxed text-(color:--disabled)">Your report is awaiting evidence verification. Proposed bureau: Dinas Pertamanan dan Hutan Kota.</p>
+                    </li>
+                    <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">2</span>
+                        <p class="text-[13px] leading-relaxed text-(color:--disabled)">A duty inspector will assess site urgency within the target 48-hour SLA window once routed.</p>
+                    </li>
+                    <li class="flex items-start gap-3"><span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-(color:--light-green) font-(family-name:--font-pm) text-[11px] font-semibold text-(color:--success)">3</span>
+                        <p class="text-[13px] leading-relaxed text-(color:--disabled)">Status transitions and official statements will appear directly on your tracking page.</p>
+                    </li>
+                </ol>
+                <div class="mt-7 flex flex-wrap gap-3">
+                    <a href="report-detail.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Track report status</a>
+                    <button type="button" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">Print receipt</button>
+                    <a href="liveFeed.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">Back to feed</a>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
+            <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
+                <div class="sm:col-span-2 md:col-span-1">
+                    <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
+                    <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">File a report</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
-        <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
-            <div class="sm:col-span-2 md:col-span-1">
-                <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
-                <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
-                <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+            <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
+                <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
+                    <p>&copy; 2026 WargaReport. All rights reserved.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
+                </div>
             </div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">File a report</a></li><li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li><li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li><li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li><li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li><li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li><li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li><li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li></ul></div>
-        </div>
-        <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
-            <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
-                <p>&copy; 2026 WargaReport. All rights reserved.</p>
-                <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>

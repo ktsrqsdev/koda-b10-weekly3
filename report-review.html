@@ -46,7 +46,7 @@
                         </svg>
                         Sign In
                     </a>
-                    <a data-masuk hidden href="notifications.html" class="relative p-1" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a data-masuk hidden href="notifications.html" class="relative p-1"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_214_700)">
                                 <path d="M12.75 5.66675C12.75 4.53958 12.3022 3.45857 11.5052 2.66154C10.7082 1.86451 9.62717 1.41675 8.5 1.41675C7.37283 1.41675 6.29183 1.86451 5.4948 2.66154C4.69777 3.45857 4.25 4.53958 4.25 5.66675C4.25 10.6251 2.125 12.0417 2.125 12.0417H14.875C14.875 12.0417 12.75 10.6251 12.75 5.66675Z" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
                                 <path d="M9.72543 14.875C9.6009 15.0897 9.42215 15.2679 9.20709 15.3918C8.99203 15.5156 8.7482 15.5808 8.50001 15.5808C8.25183 15.5808 8.008 15.5156 7.79294 15.3918C7.57788 15.2679 7.39913 15.0897 7.2746 14.875" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
@@ -114,7 +114,7 @@
 
                 <!-- tampilan mobile -->
                 <details class="group relative lg:hidden">
-                    <summary aria-label="Menu" class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
+                    <summary class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
                         <svg class="h-5 w-5 group-open:hidden" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                             <path d="M3 5h14M3 10h14M3 15h14" />
                         </svg>
@@ -152,63 +152,68 @@
                 </details>
             </nav>
         </header>
-        <main class="report-layout">
-            <aside class="report-sidebar">
+        <main class="mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 px-5 pb-28 pt-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-9 lg:px-8 xl:px-(--gutter)">
+            <aside class="flex flex-col gap-6 lg:pt-3">
                 <div>
-                    <p class="eyebrow">Community Intake</p>
-                    <h1 class="heading-md">Report an Issue</h1>
-                    <p class="note">Public civic reporting for Indonesian municipal services.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.14em] text-(--disabled)">Community Intake</p>
+                    <h1 class="mt-3 font-(family-name:--font-f) text-2xl font-bold tracking-tight">Report an Issue</h1>
+                    <p class="mt-1 text-[13px] leading-snug text-(--disabled)">Public civic reporting for Indonesian municipal services.</p>
                 </div>
-                <nav class="step-list" aria-label="Report steps">
-                    <a class="step-item is-done" href="report-topic.html"><span class="step-number">01</span>Topic</a>
-                    <a class="step-item is-done" href="report-location.html"><span class="step-number">02</span>Location</a>
-                    <a class="step-item is-done" href="report-proof.html"><span class="step-number">03</span>Proof</a>
-                    <a class="step-item is-active" href="report-review.html"><span class="step-number">04</span>Review &amp; Send</a>
+
+                <nav class="flex flex-col gap-1.5">
+                    <a href="report-topic.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">01</span>Topic<span class="ml-auto text-(color:--success)">&#10003;</span></a>
+                    <a href="report-location.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">02</span>Location<span class="ml-auto text-(color:--success)">&#10003;</span></a>
+                    <a href="report-proof.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">03</span>Proof<span class="ml-auto text-(color:--success)">&#10003;</span></a></a>
+                    <a href="report-review.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium bg-(color:--success) text-(color:--light)"><span class="font-(family-name:--font-pm) text-[11px]">04</span>Review &amp; Send</a>
                 </nav>
-                <section class="card">
-                    <h2 class="card-heading">
+
+                <section class="rounded-[18px] border border-dashed border-(color:--bd-secondary) bg-(color:--bg-secondary) px-[18px] py-[17px]">
+                    <h2 class="mb-1.5 text-[13px] font-semibold flex items-center gap-2">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_214_1234)">
-                                <g clip-path="url(#clip1_214_1234)">
-                                    <path d="M6.99992 12.8334C6.99992 12.8334 11.6666 10.5001 11.6666 7.00008V2.91675L6.99992 1.16675L2.33325 2.91675V7.00008C2.33325 10.5001 6.99992 12.8334 6.99992 12.8334Z" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            <g clip-path="url(#clip0_214_639)">
+                                <g clip-path="url(#clip1_214_639)">
+                                    <path d="M6.99999 12.8334C6.99999 12.8334 11.6667 10.5001 11.6667 7.00008V2.91675L6.99999 1.16675L2.33333 2.91675V7.00008C2.33333 10.5001 6.99999 12.8334 6.99999 12.8334Z" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
                                 </g>
                             </g>
                             <defs>
-                                <clipPath id="clip0_214_1234">
+                                <clipPath id="clip0_214_639">
                                     <rect width="14" height="14" fill="white" />
                                 </clipPath>
-                                <clipPath id="clip1_214_1234">
+                                <clipPath id="clip1_214_639">
                                     <rect width="14" height="14" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
                         Independent Verification
                     </h2>
-                    <p class="note">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
+                    <p class="text-xs leading-relaxed text-(color:--disabled)">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
                 </section>
-                <a class="link-plain" href="liveFeed.html">Cancel and return to feed</a>
+
+                <a href="liveFeed.html" class="text-[13px] font-semibold text-(--success) hover:underline">Cancel and return to feed</a>
             </aside>
 
-            <section class="card card-lg">
-                <div class="step-header">
-                    <p class="eyebrow">Step 04 of 04</p>
-                    <h2 class="heading-md">Report summary &amp; declaration</h2>
-                    <p class="note">Review the report and choose notifications before final submission.</p>
+            <section data-review-form class="rounded-3xl border border-(--bd-secondary) bg-(--bg-secondary) p-6 shadow-sm sm:p-9">
+                <div>
+                    <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.14em] text-(--disabled)">Step 04 of 04</p>
+                    <h2 class="mt-3 font-(family-name:--font-f) text-[28px] font-bold leading-tight tracking-tight ">Report summary &amp; declaration</h2>
+                    <p class="mt-1.5 text-[13px] text-(--disabled)">Review the report and choose notifications before final submission.</p>
                 </div>
 
-                <div class="form">
-                    <div class="field">
-                        <label class="field-label" for="title">Concise Title *</label>
-                        <input class="input" id="title" type="text" value="Pohon tumbang di depan Kebun Binatang samping Kampus ITB">
+                <div class="mt-6 flex max-w-140 flex-col gap-5">
+                    <div class="flex flex-col gap-2">
+                        <label for="title" class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Concise Title *</label>
+                        <input id="title" name="title" type="text" maxlength="120" value="Pohon tumbang di depan Kebun Binatang samping Kampus ITB" class="w-full rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-3 text-[13px] outline-none focus:border-(--success) focus:ring-2 focus:ring-(--success)/15">
                     </div>
-                    <div class="field">
-                        <div class="label-row">
-                            <label class="field-label" for="details">Incident Observation Details *</label>
-                            <span class="field-hint">100 chars (min 15)</span>
+
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-end justify-between gap-3">
+                            <label for="details" class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Incident Observation Details *</label>
+                            <span class="font-(family-name:--font-pm) text-xs text-(--disabled)">0 / 1000 chars (min 15)</span>
                         </div>
-                        <textarea class="input" id="details" rows="3">Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon untuk diperhatikan</textarea>
+                        <textarea id="details" name="details" rows="3" maxlength="1000" class="min-h-20 w-full resize-y rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-3 text-[13px] leading-relaxed outline-none focus:border-(--success) focus:ring-2 focus:ring-(--success)/15">Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon untuk diperhatikan</textarea>
                     </div>
-                    <label class="info-bar">
+
+                    <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-(--success)/20 bg-(--light-green) px-4 py-3.5">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_214_1162)">
                                 <g clip-path="url(#clip1_214_1162)">
@@ -225,40 +230,47 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                        <span class="info-bar-text">Post anonymously on public feed
-                            <span class="note">Your name will be masked as Warga Anonim on open records.</span>
+                        <span class="flex flex-1 flex-col text-xs font-semibold">
+                            Post anonymously on public feed
+                            <span class="mt-0.5 text-[11px] font-normal text-(--disabled)">Your name will be masked as Warga Anonim on open records.</span>
                         </span>
-                        <input class="info-bar-right" type="checkbox">
+                        <input data-anonim type="checkbox" class="h-4 w-4 shrink-0 cursor-pointer accent-(--success)">
                     </label>
-                    <div class="form-row">
-                        <div class="field">
-                            <label class="field-label" for="filer">Filer Name *</label>
-                            <input class="input" id="filer" type="text" value="Fahrul Septiana">
+
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label for="filer" class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Filer Name *</label>
+                            <input id="filer" name="filer" type="text" value="Fahrul Septiana" class="w-full rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-3 text-[13px] outline-none focus:border-(--success) focus:ring-2 focus:ring-(--success)/15">
                         </div>
-                        <div class="field">
-                            <label class="field-label" for="alert-email">Email for Status Alerts *</label>
-                            <input class="input" id="alert-email" type="email" value="fahrul@wargareport.id">
+                        <div class="flex flex-col gap-2">
+                            <label for="alert-email" class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Email for Status Alerts *</label>
+                            <input id="alert-email" name="alert-email" type="email" value="fahrul@wargareport.id" class="w-full rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-3 text-[13px] outline-none focus:border-(--success) focus:ring-2 focus:ring-(--success)/15">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="field">
-                            <label class="field-label" for="phone">Phone / WhatsApp</label>
-                            <input class="input" id="phone" type="tel" value="+62 812 9842-1054">
+
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label for="phone" class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Phone / WhatsApp</label>
+                            <input id="phone" name="phone" type="tel" value="+62 812-9842-1054" class="w-full rounded-xl border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-3 text-[13px] outline-none focus:border-(--success) focus:ring-2 focus:ring-(--success)/15">
                         </div>
-                        <div class="field">
-                            <p class="field-label">Status alert channels</p>
-                            <div class="chip-row">
-                                <label class="chip"><input type="checkbox" checked>Email</label>
-                                <label class="chip"><input type="checkbox">SMS</label>
+                        <div class="flex flex-col gap-2">
+                            <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-[0.1em] text-(--disabled)">Status alert channels</p>
+                            <div class="flex items-center gap-5 sm:h-11.5">
+                                <label class="flex cursor-pointer items-center gap-2 text-xs text-(--disabled)"><input data-channel-email type="checkbox" checked class="h-4 w-4 cursor-pointer accent-(--success)">Email</label>
+                                <label class="flex cursor-pointer items-center gap-2 text-xs text-(--disabled)"><input data-channel-sms type="checkbox" class="h-4 w-4 cursor-pointer accent-(--success)">SMS</label>
                             </div>
                         </div>
                     </div>
-                    <label class="checkbox-row"><input type="checkbox">I confirm this incident was authentically observed on site under Law No. 25/2009.</label>
+
+                    <label class="flex cursor-pointer items-center gap-2.5 text-xs text-(--disabled)">
+                        <input data-declaration type="checkbox" class="h-4 w-4 shrink-0 cursor-pointer accent-(--success)">
+                        I confirm this incident was authentically observed on-site under Law No. 25/2009.
+                    </label>
                 </div>
 
-                <div class="form-buttons">
-                    <a class="btn btn-back" href="report-proof.html">
+                <p data-review-message class="mt-4 text-xs text-(--danger)" hidden></p>
+                <div class="mt-5 flex items-center justify-between border-t border-(--bd-secondary) pt-5">
+                    <a href="report-proof.html" class="inline-flex items-center gap-2 rounded-full border border-(--bd-secondary) bg-(--bg-secondary) px-4 py-2 text-xs font-medium hover:bg-(--bg-primary)">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_214_1193)">
                                 <path d="M9.5 6H2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
@@ -272,63 +284,68 @@
                         </svg>
                         Back
                     </a>
-                    <button class="btn btn-green" type="button">
+                    <button data-dispatch type="button" class="inline-flex cursor-pointer items-center gap-2 rounded-full bg-(--success) px-6 py-3 text-[13px] font-semibold text-white hover:bg-(--success)/90">
                         Dispatch Report
                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_214_1200)">
-                                <path d="M2.7085 6.5H10.2918" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
-                                <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_214_1200">
-                                    <rect width="13" height="13" fill="white" />
-                                </clipPath>
-                            </defs>
+                            <path d="M2.7085 6.5H10.2918" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                            <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
                         </svg>
                     </button>
                 </div>
             </section>
         </main>
-
-        <footer class="footer">
-            <div class="footer-grid">
-                <div>
-                    <p class="footer-brand">WargaReport</p>
-                    <p class="footer-text">WargaReport is an independent civic reporting platform for municipal
-                        infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track
-                        resolution updates from the responsible agencies.</p>
-                    <p class="footer-note">Not for life-threatening emergencies — call 112 (National Emergency Call Center)
-                        or BPBD DKI directly.</p>
+        <!-- Footer -->
+        <footer class="mt-20 border-t border-(--bd-primary) bg-(--bg-secondary)">
+            <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
+                <div class="sm:col-span-2 md:col-span-1">
+                    <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
+                    <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(--disabled)">
+                        WargaReport is an independent civic reporting platform for municipal infrastructure issues
+                        across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates
+                        from the responsible agencies.
+                    </p>
+                    <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(--danger)">
+                        Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD
+                        DKI directly.
+                    </p>
                 </div>
                 <div>
-                    <h4 class="footer-title">Citizens</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">File a report</a></li>
-                        <li><a href="#">Track complaint</a></li>
-                        <li><a href="#">Public reports registry</a></li>
-                        <li><a href="#">My filing history</a></li>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">
+                        Citizens
+                    </h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">File a report</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Track complaint</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Public reports registry</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">My filing history</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Agencies</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Participating bureaus</a></li>
-                        <li><a href="#">Officer triage queue</a></li>
-                        <li><a href="#">SLA benchmarks</a></li>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">
+                        Agencies
+                    </h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">Participating bureaus</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Officer triage queue</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">SLA benchmarks</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Civic Trust</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Help & FAQs</a></li>
-                        <li><a href="#">Evidence guidelines</a></li>
-                        <li><a href="#">PII & redaction policy</a></li>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(--success)">
+                        Civic Trust
+                    </h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(--disabled)">
+                        <li><a href="#" class="hover:text-(--dark)">Help &amp; FAQs</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">Evidence guidelines</a></li>
+                        <li><a href="#" class="hover:text-(--dark)">PII &amp; redaction policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 WargaReport. All rights reserved.</p>
-                <p class="mono">UU No. 25/2009 Compliant</p>
+            <div class="mx-auto max-w-7xl px-5 md:px-(--gutter)">
+                <div class="flex flex-col justify-between gap-2 border-t border-(--bd-secondary) py-5 text-[11px] text-(--disabled) sm:flex-row">
+                    <p>&copy; 2026 WargaReport. All rights reserved.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
+                </div>
             </div>
         </footer>
     </body>
