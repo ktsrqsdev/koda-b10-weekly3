@@ -588,7 +588,6 @@ function buatBarisFeed(l) {
 }
 
 function tampilkanLaporanBaru(daftar) {
-    // judul & lokasi diisi lewat textContent supaya teks dari warga tidak dianggap HTML
     semuaLaporan()
         .slice()
         .reverse()
@@ -710,12 +709,10 @@ function isiDetailLaporanBaru(kasus) {
     const bukti = Array.isArray(kasus.bukti) ? kasus.bukti : [];
     const { tanggal, jam } = formatWaktu(kasus.waktu);
 
-    // status + sisa SLA
     const [lencana, sisa] = ambil("main section > div > div").children;
     lencana.outerHTML = `<span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(--bg-submitted) text-(--txt-submitted) [border:var(--bd-submitted)]">${ikonSubmitted()}Submitted</span>`;
     sisa.lastChild.textContent = sisaSla(kasus.waktu, Number(kasus.sla) || 48);
 
-    // pipeline: baru tahap pertama yang selesai
     const AKTIF = ["bg-(--bg-received)", "[border:var(--bd-received)]", "text-(--success)"];
     const PASIF = ["bg-(--bg-submitted)", "text-(--disabled2)"];
     ambilSemua("main ol")[0].querySelectorAll("li").forEach((li, i) => {
@@ -724,19 +721,16 @@ function isiDetailLaporanBaru(kasus) {
         li.classList.add(...PASIF);
     });
 
-    // bukti
     const judulBukti = ambilSemua("main h2").find(h => h.textContent.trim() === "Evidence on File");
     judulBukti.nextElementSibling.textContent = `${bukti.length} attachment${bukti.length === 1 ? "" : "s"}`;
     judulBukti.parentElement.querySelector(".grid").innerHTML = bukti.map(b => buatKartuBukti(b, false)).join("");
 
-    // riwayat: hanya entri "submitted"
     const [entri, ...sisaEntri] = ambilSemua("li", ambilSemua("main ol")[1]);
     sisaEntri.forEach(li => li.remove());
     ambil("span.font-medium", entri).textContent = kasus.pelapor;
     ambil("span.font-medium", entri).nextElementSibling.textContent = `· ${tanggal}, ${jam} GMT+7`;
     entri.lastElementChild.textContent = `Citizen attached ${ringkasBukti(bukti)}. Awaiting evidence verification by WargaReport.`;
 
-    // petugas lapangan belum ditugaskan
     isiInfoDetail("Field Officer", el => (el.parentElement.hidden = true));
 }
 
@@ -916,7 +910,6 @@ function siapkanBukti() {
     kosong.textContent = "No evidence attached yet. Use the buttons above to add a photo, audio memo, or video clip.";
     wadah.after(kosong);
 
-    // daftar bukti disimpan di draf supaya aman saat Back / refresh
     let daftarBukti = (draf.bukti || []).filter(b => typeof b === "object" && b.jenis);
     let urutan = daftarBukti.length;
 
@@ -1022,7 +1015,6 @@ function siapkanRingkasan() {
         };
         simpan("wr_laporan", [laporan, ...semuaLaporan()]);
 
-        // notifikasi pertama untuk laporan ini
         const { tanggal, jam } = formatWaktu(waktu);
         simpan("wr_notif", [
             {
