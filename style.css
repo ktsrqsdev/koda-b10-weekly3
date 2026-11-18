@@ -50,3 +50,43 @@
     --dark-70: color-mix(in srgb, var(--dark) 70%, transparent);
     --green-20: color-mix(in srgb, var(--green) 20%, transparent); 
 }
+
+@media print {
+    /* Sembunyikan navbar dan footer */
+    header,
+    footer {
+        display: none !important;
+    }
+
+    /* Hilangkan tombol-tombol aksi */
+    main section > div.mt-7 {
+        display: none !important;
+    }
+
+    /* Rapikan area receipt */
+    body {
+        background: white !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        max-width: 100% !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+    }
+
+    main section {
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        border: 1px solid #d7cbb6 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+
+    /* Atur ukuran kertas */
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+}

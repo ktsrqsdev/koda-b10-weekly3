@@ -80,6 +80,25 @@ const JALAN_UMUM = {
 
 const IKON_STATUS = { Submitted: "submitted", Received: "received", "In review": "review" };
 
+function ikonSubmitted() {
+    return `
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-3 w-3 shrink-0"
+            aria-hidden="true"
+        >
+            <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/>
+            <path d="m8 12 2.5 2.5L16 9"/>
+        </svg>
+    `;
+}
+
 const NAMA_HALAMAN = location.pathname.split("/").pop().replace(".html", "") || "index";
 
 const AKUN_DEMO = {
@@ -528,8 +547,62 @@ function siapkanBeranda() {
     });
 }
 
+function ringkasBukti(bukti) {
+    const hitung = jenis => bukti.filter(b => b.jenis === jenis).length;
+    const bagian = [
+        [hitung("foto"), "photo"],
+        [hitung("audio"), "audio note"],
+        [hitung("video"), "video clip"],
+    ]
+        .filter(([n]) => n)
+        .map(([n, nama]) => `${n} ${nama}${n > 1 ? "s" : ""}`);
+    return bagian.join(", ") || "no files";
+}
+
+function buatBarisFeed(l) {
+    const bukti = Array.isArray(l.bukti) ? l.bukti : [];
+    const foto = bukti.find(b => b.jenis === "foto");
+    const thumb = foto
+        ? `<img src="assets/img/${foto.gambar}.png" alt="" class="h-18 w-18 shrink-0 rounded-xl border border-(--bd-secondary) object-cover" />`
+        : `<div class="grid h-18 w-18 shrink-0 place-items-center rounded-xl border border-(--bd-secondary) bg-(--bg-received)"><img src="assets/${bukti.some(b => b.jenis === "video") ? "video" : "music"}.svg" alt=""></div>`;
+    const href = `report-detail.html?id=${l.id}`;
+
+    return `<li data-baru ${bukti.length ? "data-bukti" : ""} class="flex flex-wrap items-center gap-3.5 px-5 py-3.5">
+        ${thumb}
+        <div class="flex min-w-0 flex-1 flex-col gap-1.25">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex shrink-0 items-center gap-1 font-semibold whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-ps) text-[10px] bg-(--bg-submitted) text-(--txt-submitted) [border:var(--bd-submitted)]">${ikonSubmitted()}Submitted</span>
+                <span class="font-(family-name:--font-pm) text-[10px] text-(--disabled2)">${l.id}</span>
+                <span class="text-xs font-semibold"><span class="mr-1.5 text-(--disabled)">&middot;</span>${l.instansi}</span>
+            </div>
+            <a href="${href}" class="text-[15px] font-semibold leading-snug hover:text-(--success)"></a>
+            <p class="flex flex-wrap items-center gap-1.5 text-xs text-(--disabled2)"><img src="assets/maps.svg" alt="" class="h-3 w-3"><span data-lokasi></span><span>&middot; ${l.kategori}</span></p>
+        </div>
+        <div class="flex w-full shrink-0 items-center justify-between gap-3.5 sm:w-auto sm:justify-start">
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full border border-(--bd-primary) bg-(--bg-secondary) px-3 py-1 font-(family-name:--font-pm) text-[11px]"><img src="assets/i-thumbs-up.svg" alt="">${l.suara}</button>
+            <span class="inline-flex min-w-15.5 items-center gap-1.5 font-(family-name:--font-pm) text-[11px] text-(--disabled)">${bukti.length} proof</span>
+            <span class="min-w-10.5 font-(family-name:--font-pm) text-[11px] text-(--disabled2)">${formatWaktu(l.waktu).tanggal}</span>
+            <a href="${href}" class="whitespace-nowrap text-[13px] font-semibold text-(--success)">Track &rarr;</a>
+        </div>
+    </li>`;
+}
+
+function tampilkanLaporanBaru(daftar) {
+    // judul & lokasi diisi lewat textContent supaya teks dari warga tidak dianggap HTML
+    semuaLaporan()
+        .slice()
+        .reverse()
+        .forEach(l => {
+            daftar.insertAdjacentHTML("afterbegin", buatBarisFeed(l));
+            const li = daftar.firstElementChild;
+            ambil("a.text-\\[15px\\]", li).textContent = l.judul;
+            ambil("[data-lokasi]", li).textContent = l.lokasi;
+        });
+}
+
 function siapkanFeed() {
     const daftar = ambil("main ul");
+    tampilkanLaporanBaru(daftar);
     const baris = ambilSemua("li", daftar);
     const kolomCari = ambil('input[type="search"]');
 
@@ -544,6 +617,8 @@ function siapkanFeed() {
     pesanKosong.hidden = true;
     daftar.after(pesanKosong);
 
+    tombolKategori[0].textContent = `All Issues (${baris.length})`;
+
     let kategori = "";
     let status = "";
 
@@ -556,7 +631,7 @@ function siapkanFeed() {
                 li.textContent.toLowerCase().includes(kataKunci) &&
                 (!kategori || kategoriLi === kategori) &&
                 (!status || statusLi === status) &&
-                (!cekFoto.checked || ambil(":scope > img", li))
+                (!cekFoto.checked || ambil(":scope > img", li) || li.dataset.bukti !== undefined)
             );
         });
         pesanKosong.hidden = baris.some(li => !li.hidden);
@@ -626,6 +701,45 @@ function isiInfoDetail(label, isi) {
     if (teksLabel) isi(teksLabel.nextElementSibling);
 }
 
+function sisaSla(waktu, jam) {
+    const sisa = Math.max(0, new Date(waktu).getTime() + jam * 3600000 - Date.now());
+    return `${Math.floor(sisa / 3600000)}h ${Math.floor((sisa % 3600000) / 60000)}m left`;
+}
+
+function isiDetailLaporanBaru(kasus) {
+    const bukti = Array.isArray(kasus.bukti) ? kasus.bukti : [];
+    const { tanggal, jam } = formatWaktu(kasus.waktu);
+
+    // status + sisa SLA
+    const [lencana, sisa] = ambil("main section > div > div").children;
+    lencana.outerHTML = `<span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-2 py-0.5 font-(family-name:--font-pm) text-[10px] bg-(--bg-submitted) text-(--txt-submitted) [border:var(--bd-submitted)]">${ikonSubmitted()}Submitted</span>`;
+    sisa.lastChild.textContent = sisaSla(kasus.waktu, Number(kasus.sla) || 48);
+
+    // pipeline: baru tahap pertama yang selesai
+    const AKTIF = ["bg-(--bg-received)", "[border:var(--bd-received)]", "text-(--success)"];
+    const PASIF = ["bg-(--bg-submitted)", "text-(--disabled2)"];
+    ambilSemua("main ol")[0].querySelectorAll("li").forEach((li, i) => {
+        if (i === 0) return;
+        li.classList.remove(...AKTIF);
+        li.classList.add(...PASIF);
+    });
+
+    // bukti
+    const judulBukti = ambilSemua("main h2").find(h => h.textContent.trim() === "Evidence on File");
+    judulBukti.nextElementSibling.textContent = `${bukti.length} attachment${bukti.length === 1 ? "" : "s"}`;
+    judulBukti.parentElement.querySelector(".grid").innerHTML = bukti.map(b => buatKartuBukti(b, false)).join("");
+
+    // riwayat: hanya entri "submitted"
+    const [entri, ...sisaEntri] = ambilSemua("li", ambilSemua("main ol")[1]);
+    sisaEntri.forEach(li => li.remove());
+    ambil("span.font-medium", entri).textContent = kasus.pelapor;
+    ambil("span.font-medium", entri).nextElementSibling.textContent = `· ${tanggal}, ${jam} GMT+7`;
+    entri.lastElementChild.textContent = `Citizen attached ${ringkasBukti(bukti)}. Awaiting evidence verification by WargaReport.`;
+
+    // petugas lapangan belum ditugaskan
+    isiInfoDetail("Field Officer", el => (el.parentElement.hidden = true));
+}
+
 function isiDetail(id, kasus) {
     const judul = ambil("main h1");
     judul.textContent = kasus.judul;
@@ -643,6 +757,7 @@ function isiDetail(id, kasus) {
     if (kasus.waktu) {
         isiInfoDetail("Reported On", el => (ambil("span", el).textContent = formatWaktu(kasus.waktu).tanggalLengkap));
         isiInfoDetail("Reported By", el => (el.textContent = kasus.pelapor));
+        isiDetailLaporanBaru(kasus);
     }
 
     const tombolUpvote = ambilSemua("main button").find(t => t.textContent.includes("Upvote"));
@@ -696,7 +811,7 @@ function siapkanTopik() {
 
     function dataKartu(el) {
         const judulKartu = el.firstElementChild;
-        const nama = [...judulKartu.childNodes].find(n => n.nodeType === 3).textContent.trim();
+        const nama = [...judulKartu.childNodes].find(n => n.nodeType === 3 && n.textContent.trim()).textContent.trim();
         return {
             kategori: nama,
             jenis: ambil("p", el).textContent.trim(),
@@ -762,60 +877,77 @@ function siapkanLokasi() {
     });
 }
 
+const FOTO_CONTOH = ["img1", "img2", "img3", "img4", "img5"];
+
+const CONTOH_BUKTI = {
+    foto: { nama: "incident_capture", ekstensi: "jpg", info: "Image · 1.8 MB", catatan: "Photographed live on site by resident camera." },
+    audio: { nama: "voice_memo", ekstensi: "m4a", info: "Audio · 0.9 MB", catatan: "Voice note recorded on site.", durasi: "0:15" },
+    video: { nama: "site_clip", ekstensi: "mp4", info: "Video · 5.2 MB", catatan: "Short clip of the incident.", durasi: "0:12" },
+};
+
+const IKON_PUTAR = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#fff" stroke-width="1.5"/><path d="M11.5 9.5L18.5 14L11.5 18.5V9.5Z" fill="#fff"/></svg>`;
+
+function buatKartuBukti(b, denganHapus) {
+    const media =
+        b.jenis === "foto"
+            ? `<img src="assets/img/${b.gambar}.png" alt="Evidence photo" class="aspect-video w-full object-cover">`
+            : b.jenis === "audio"
+              ? `<div class="grid aspect-video place-items-center bg-(--bg-received)"><div class="flex flex-col items-center gap-2"><img src="assets/music.svg" alt=""><span class="font-(family-name:--font-pm) text-[11px] text-(--success)">Audio clip &middot; ${b.durasi}</span></div></div>`
+              : `<div class="relative grid aspect-video place-items-center bg-(--dark)">${IKON_PUTAR}<span class="absolute bottom-2 right-2 rounded-md bg-(--dark-70) px-1.5 py-0.5 font-(family-name:--font-pm) text-[10px] text-(--light)">${b.durasi}</span></div>`;
+    const hapus = denganHapus
+        ? `<button type="button" data-hapus aria-label="Remove file" class="shrink-0 cursor-pointer"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1.875 3.75H13.125" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52"/><path d="M11.875 3.75L11.25 12.5C11.25 12.8315 11.1183 13.1495 10.8839 13.3839C10.6495 13.6183 10.3315 13.75 10 13.75H5C4.66848 13.75 4.35054 13.6183 4.11612 13.3839C3.8817 13.1495 3.75 12.8315 3.75 12.5L3.125 3.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52"/><path d="M6.25 6.875V10.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52"/><path d="M8.75 6.875V10.625" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52"/><path d="M5.625 3.75V2.5C5.625 2.33424 5.69085 2.17527 5.80806 2.05806C5.92527 1.94085 6.08424 1.875 6.25 1.875H8.75C8.91576 1.875 9.07473 1.94085 9.19194 2.05806C9.30915 2.17527 9.375 2.33424 9.375 2.5V3.75" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52"/></svg></button>`
+        : "";
+    return `<article class="overflow-hidden rounded-[14px] border border-(--bd-secondary) bg-(--bg-secondary)">
+        ${media}
+        <div class="flex items-start justify-between gap-2 px-3.5 py-3">
+            <div><p class="font-(family-name:--font-pm) text-[11px]">${b.nama}</p><p class="mb-1 mt-0.5 font-(family-name:--font-pm) text-[10px] uppercase text-(--disabled)">${b.info}</p><p class="text-xs leading-relaxed text-(--disabled)">${b.catatan}</p></div>${hapus}
+        </div>
+    </article>`;
+}
+
 function siapkanBukti() {
     const draf = muat("wr_draf", {});
     if (!draf.alamat) return (location.href = "report-topic.html");
 
-    const [artikelFoto, artikelVideo] = ambilSemua("main > section article");
-    const wadah = artikelFoto.parentElement;
-    const cetakanFoto = artikelFoto.cloneNode(true);
-    const cetakanVideo = artikelVideo.cloneNode(true);
+    const wadah = ambil("main > section article").parentElement;
     const hitung = ambilSemua("main p").find(p => p.textContent.startsWith("Attached evidence"));
+    const kosong = document.createElement("p");
+    kosong.className = "rounded-[14px] border border-dashed border-(--bd-primary) px-4 py-6 text-center text-xs text-(--disabled) sm:col-span-2";
+    kosong.textContent = "No evidence attached yet. Use the buttons above to add a photo, audio memo, or video clip.";
+    wadah.after(kosong);
 
-    const CONTOH = {
-        foto: {
-            nama: "incident_capture",
-            ekstensi: "jpg",
-            info: "Image · 1.8 MB",
-            catatan: "Photographed live on site by resident camera.",
-        },
-        audio: {
-            nama: "voice_memo",
-            ekstensi: "m4a",
-            info: "Audio · 0.9 MB",
-            catatan: "Voice note recorded on site.",
-            durasi: "0:15",
-        },
-        video: {
-            nama: "site_clip",
-            ekstensi: "mp4",
-            info: "Video · 5.2 MB",
-            catatan: "Short clip of the incident.",
-            durasi: "0:12",
-        },
-    };
+    // daftar bukti disimpan di draf supaya aman saat Back / refresh
+    let daftarBukti = (draf.bukti || []).filter(b => typeof b === "object" && b.jenis);
+    let urutan = daftarBukti.length;
 
-    const semuaBukti = () => ambilSemua("article", wadah);
-    const perbaruiHitungan = () => (hitung.textContent = `Attached evidence (${semuaBukti().length})`);
+    function gambarUlang() {
+        wadah.innerHTML = daftarBukti.map(b => buatKartuBukti(b, true)).join("");
+        hitung.textContent = `Attached evidence (${daftarBukti.length})`;
+        kosong.hidden = daftarBukti.length > 0;
+        wadah.hidden = daftarBukti.length === 0;
+        simpan("wr_draf", { ...muat("wr_draf", {}), bukti: daftarBukti });
+    }
 
     const pesan = aturLanjut(
-        () => (semuaBukti().length ? "" : "Please attach at least one evidence file."),
-        () => simpan("wr_draf", { ...draf, bukti: semuaBukti().map(a => ambil("p", a).textContent.trim()) }),
+        () => (daftarBukti.length ? "" : "Please attach at least one evidence file."),
+        () => simpan("wr_draf", { ...muat("wr_draf", {}), bukti: daftarBukti }),
     );
 
     function tambah(jenis) {
-        if (semuaBukti().length >= 5) return tampilkanPesan(pesan, "Maximum 5 evidence files.");
+        if (daftarBukti.length >= 5) return tampilkanPesan(pesan, "Maximum 5 evidence files.");
         pesan.hidden = true;
 
-        const data = CONTOH[jenis];
-        const baris = (jenis === "foto" ? cetakanFoto : cetakanVideo).cloneNode(true);
-        const [nama, info, catatan] = ambilSemua("p", baris);
-        nama.textContent = `${data.nama}_${semuaBukti().length + 1}.${data.ekstensi}`;
-        info.textContent = data.info;
-        catatan.textContent = data.catatan;
-        if (data.durasi) ambil("span", baris).textContent = data.durasi;
-        wadah.append(baris);
-        perbaruiHitungan();
+        const data = CONTOH_BUKTI[jenis];
+        urutan += 1;
+        daftarBukti.push({
+            jenis,
+            nama: `${data.nama}_${urutan}.${data.ekstensi}`,
+            info: data.info,
+            catatan: data.catatan,
+            ...(data.durasi && { durasi: data.durasi }),
+            ...(jenis === "foto" && { gambar: FOTO_CONTOH[(urutan - 1) % FOTO_CONTOH.length] }),
+        });
+        gambarUlang();
     }
 
     const [tombolFoto, tombolAudio, tombolVideo] = ambilSemua("main button").filter(t => !t.closest("article"));
@@ -824,15 +956,19 @@ function siapkanBukti() {
     tombolVideo.addEventListener("click", () => tambah("video"));
 
     wadah.addEventListener("click", e => {
-        if (!e.target.closest("button")) return;
-        e.target.closest("article").remove();
-        perbaruiHitungan();
+        if (!e.target.closest("[data-hapus]")) return;
+        const kartu = e.target.closest("article");
+        daftarBukti.splice([...wadah.children].indexOf(kartu), 1);
+        pesan.hidden = true;
+        gambarUlang();
     });
+
+    gambarUlang();
 }
 
 function siapkanRingkasan() {
     const draf = muat("wr_draf", {});
-    if (!draf.alamat || !draf.bukti) return (location.href = "report-topic.html");
+    if (!draf.alamat || !draf.bukti?.length) return (location.href = "report-proof.html");
 
     const pengguna = penggunaAktif();
     const kolomJudul = ambil("#title");
@@ -880,7 +1016,7 @@ function siapkanRingkasan() {
             sla: draf.sla,
             lokasi: draf.alamat,
             wilayah: `${draf.wilayah}, Kota Bandung`,
-            bukti: draf.bukti.length,
+            bukti: draf.bukti,
             suara: 0,
             waktu,
         };
@@ -988,7 +1124,7 @@ function siapkanNotifikasi() {
         tanggal.textContent = `Dispatched ${n.tanggal}, ${n.jam} GMT+7`;
         isi.textContent = n.isi;
         lencana.lastChild.textContent = n.status;
-        ambil("img", lencana).src = `assets/${IKON_STATUS[n.status] || "submitted"}.svg`;
+        ambil("img, svg", lencana).outerHTML = ikonSubmitted();
         ambil("a", panel).href = `report-detail.html?id=${n.kasus}`;
     }
 

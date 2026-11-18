@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WargaReport - Report an Issue</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WargaReport - Report an Issue</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
 
-<body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
-    <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
+    <body class="bg-(color:--bg-primary) font-(family-name:--font-ps) text-(color:--dark) antialiased">
+        <header class="relative z-30 border-b border-(--bd-primary) bg-(--bg-secondary)">
             <nav class="mx-auto flex h-17 max-w-7xl items-center justify-between gap-4 px-5 lg:px-8 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:px-(--gutter)">
                 <a href="index.html" class="flex items-center gap-2 font-(family-name:--font-f) text-[19px] font-bold tracking-tight">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
                         </svg>
                         Sign In
                     </a>
-                    <a data-masuk hidden href="notifications.html" class="relative p-1" aria-label="Notifications"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a data-masuk hidden href="notifications.html" class="relative p-1"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_214_700)">
                                 <path d="M12.75 5.66675C12.75 4.53958 12.3022 3.45857 11.5052 2.66154C10.7082 1.86451 9.62717 1.41675 8.5 1.41675C7.37283 1.41675 6.29183 1.86451 5.4948 2.66154C4.69777 3.45857 4.25 4.53958 4.25 5.66675C4.25 10.6251 2.125 12.0417 2.125 12.0417H14.875C14.875 12.0417 12.75 10.6251 12.75 5.66675Z" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
                                 <path d="M9.72543 14.875C9.6009 15.0897 9.42215 15.2679 9.20709 15.3918C8.99203 15.5156 8.7482 15.5808 8.50001 15.5808C8.25183 15.5808 8.008 15.5156 7.79294 15.3918C7.57788 15.2679 7.39913 15.0897 7.2746 14.875" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
@@ -114,7 +114,7 @@
 
                 <!-- tampilan mobile -->
                 <details class="group relative lg:hidden">
-                    <summary aria-label="Menu" class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
+                    <summary class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-(--bd-primary) [&::-webkit-details-marker]:hidden">
                         <svg class="h-5 w-5 group-open:hidden" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                             <path d="M3 5h14M3 10h14M3 15h14" />
                         </svg>
@@ -152,89 +152,232 @@
                 </details>
             </nav>
         </header>
-    <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) my-10 grid items-start gap-9 md:grid-cols-[260px_1fr]">
+        <main class="mx-auto w-full max-w-[1280px] px-5 md:px-(--gutter) my-10 grid items-start gap-9 md:grid-cols-[260px_1fr]">
             <aside class="flex flex-col gap-5">
                 <div>
                     <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Community Intake</p>
                     <h1 class="font-(family-name:--font-f) text-[28px] font-semibold leading-[1.15]">Report an Issue</h1>
                     <p class="text-xs leading-relaxed text-(color:--disabled)">Public civic reporting for Indonesian municipal services.</p>
                 </div>
-                <nav class="flex flex-col gap-1.5" aria-label="Report steps">
+                <nav class="flex flex-col gap-1.5">
                     <a href="report-topic.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">01</span>Topic<span class="ml-auto text-(color:--success)">&#10003;</span></a>
                     <a href="report-location.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">02</span>Location<span class="ml-auto text-(color:--success)">&#10003;</span></a>
                     <a href="report-proof.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium bg-(color:--success) text-(color:--light)"><span class="font-(family-name:--font-pm) text-[11px]">03</span>Proof</a>
                     <a href="report-review.html" class="flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-[13px] font-medium text-(color:--disabled)"><span class="font-(family-name:--font-pm) text-[11px]">04</span>Review &amp; Send</a>
                 </nav>
-                <section class="rounded-[18px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) px-[18px] py-[17px]">
-                    <h2 class="mb-1.5 text-[13px] font-semibold">Independent Verification</h2>
+                <section class="rounded-[18px] border border-dashed border-(color:--bd-secondary) bg-(color:--bg-secondary) px-[18px] py-[17px]">
+                    <h2 class="mb-1.5 text-[13px] font-semibold flex items-center gap-2">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_639)">
+                                <g clip-path="url(#clip1_214_639)">
+                                    <path d="M6.99999 12.8334C6.99999 12.8334 11.6667 10.5001 11.6667 7.00008V2.91675L6.99999 1.16675L2.33333 2.91675V7.00008C2.33333 10.5001 6.99999 12.8334 6.99999 12.8334Z" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_639">
+                                    <rect width="14" height="14" fill="white" />
+                                </clipPath>
+                                <clipPath id="clip1_214_639">
+                                    <rect width="14" height="14" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Independent Verification
+                    </h2>
                     <p class="text-xs leading-relaxed text-(color:--disabled)">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
                 </section>
                 <a href="liveFeed.html" class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Cancel and return to feed</a>
             </aside>
 
-        <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8">
-            <div class="mb-[18px]">
-                <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Step 03 of 04</p>
-                <h2 class="font-(family-name:--font-f) text-[28px] font-semibold leading-[1.15]">Attach evidence</h2>
-                <p class="text-xs leading-relaxed text-(color:--disabled)">Reports with photographic proof or audio notes are prioritized by field dispatchers.</p>
-            </div>
+            <section class="rounded-[22px] border border-(color:--bd-secondary) bg-(color:--bg-secondary) p-6 sm:p-8">
+                <div class="mb-[18px]">
+                    <p class="mb-2 font-(family-name:--font-pm) text-[11px] uppercase tracking-[0.1em] text-(color:--disabled)">Step 03 of 04</p>
+                    <h2 class="font-(family-name:--font-f) text-[28px] font-semibold leading-[1.15]">Attach evidence</h2>
+                    <p class="text-xs leading-relaxed text-(color:--disabled)">Reports with photographic proof or audio notes are prioritized by field dispatchers.</p>
+                </div>
 
-            <div class="flex flex-col items-center gap-1.5 rounded-2xl border-[1.5px] border-dashed border-(color:--bd-primary) bg-(color:--bg-secondary) px-5 py-7 text-center">
-                <img src="assets/upload.svg" alt="">
-                <p class="text-sm font-semibold">Upload evidence files or use camera simulation</p>
-                <p class="text-xs leading-relaxed text-(color:--disabled)">Images, audio voice notes, inspection video clips (JPG, MP4, M4A)</p>
-                <div class="flex flex-wrap justify-center gap-2">
-                    <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)"><img src="assets/camera-dark.svg" alt="">Capture Photo</button>
-                    <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)"><img src="assets/mic.svg" alt="">Record Audio Memo</button>
-                    <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)"><img src="assets/video.svg" alt="">Attach Video Clip</button>
+                <div class="flex flex-col items-center gap-1.5 rounded-2xl border-[1.5px] border-(color:--bd-primary) bg-(color:--bg-secondary) px-5 py-7 text-center">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_214_920)">
+                            <path d="M4.66662 17.3834C3.79616 16.4991 3.13866 15.428 2.74405 14.2516C2.34943 13.0752 2.22809 11.8243 2.38922 10.594C2.55035 9.36362 2.98973 8.18618 3.67398 7.15104C4.35823 6.11591 5.26937 5.25031 6.33819 4.61997C7.40702 3.98964 8.60542 3.61115 9.8424 3.51325C11.0794 3.41535 12.3224 3.60061 13.4771 4.05497C14.6318 4.50932 15.6677 5.22082 16.5063 6.13544C17.3448 7.05005 17.964 8.14372 18.3166 9.3334H20.4166C21.5295 9.3484 22.6088 9.71667 23.4987 10.385C24.3886 11.0534 25.0431 11.9873 25.3676 13.0519C25.6922 14.1165 25.6701 15.2566 25.3044 16.3078C24.9387 17.359 24.2485 18.2668 23.3333 18.9001" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            <path d="M14 14V24.5" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                            <path d="M9.33325 19.8334L13.9999 15.1667L18.6666 19.8334" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round" stroke="#0F6B4F" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_214_920">
+                                <rect width="28" height="28" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <p class="text-sm font-semibold">Upload evidence files or use camera simulation</p>
+                    <p class="text-xs leading-relaxed text-(color:--disabled)">Images, audio voice notes, inspection video clips (JPG, MP4, M4A)</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_928)">
+                                    <g clip-path="url(#clip1_214_928)">
+                                        <path d="M7.25 2H4.75L3.5 3.5H2C1.73478 3.5 1.48043 3.60536 1.29289 3.79289C1.10536 3.98043 1 4.23478 1 4.5V9C1 9.26522 1.10536 9.51957 1.29289 9.70711C1.48043 9.89464 1.73478 10 2 10H10C10.2652 10 10.5196 9.89464 10.7071 9.70711C10.8946 9.51957 11 9.26522 11 9V4.5C11 4.23478 10.8946 3.98043 10.7071 3.79289C10.5196 3.60536 10.2652 3.5 10 3.5H8.5L7.25 2Z" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                        <path d="M8 6.5C8 7.60457 7.10457 8.5 6 8.5C4.89543 8.5 4 7.60457 4 6.5C4 5.39543 4.89543 4.5 6 4.5C7.10457 4.5 8 5.39543 8 6.5Z" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_928">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                    <clipPath id="clip1_214_928">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Capture Photo
+                        </button>
+                        <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_934)">
+                                    <g clip-path="url(#clip1_214_934)">
+                                        <path d="M6 1C5.60218 1 5.22064 1.15804 4.93934 1.43934C4.65804 1.72064 4.5 2.10218 4.5 2.5V6C4.5 6.39782 4.65804 6.77936 4.93934 7.06066C5.22064 7.34196 5.60218 7.5 6 7.5C6.39782 7.5 6.77936 7.34196 7.06066 7.06066C7.34196 6.77936 7.5 6.39782 7.5 6V2.5C7.5 2.10218 7.34196 1.72064 7.06066 1.43934C6.77936 1.15804 6.39782 1 6 1Z" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                        <path d="M9.5 5V6C9.5 6.92826 9.13125 7.8185 8.47487 8.47487C7.8185 9.13125 6.92826 9.5 6 9.5C5.07174 9.5 4.1815 9.13125 3.52513 8.47487C2.86875 7.8185 2.5 6.92826 2.5 6V5" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                        <path d="M6 9.5V11" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_934">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                    <clipPath id="clip1_214_934">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Record Audio Memo
+                        </button>
+                        <button type="button" class="cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-(color:--bd-primary) bg-(color:--bg-secondary) px-3.5 py-2 text-xs font-medium text-(color:--dark) hover:border-(color:--green)">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_214_941)">
+                                    <g clip-path="url(#clip1_214_941)">
+                                        <path d="M11 4L8 6L11 8V4Z" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                        <path d="M2 3H7C7.55228 3 8 3.44772 8 4V8C8 8.55228 7.55228 9 7 9H2C1.44772 9 1 8.55228 1 8V4C1 3.44772 1.44772 3 2 3Z" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_214_941">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                    <clipPath id="clip1_214_941">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Attach Video Clip
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-2.5 mt-[18px] flex items-center justify-between">
+                    <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(color:--dark)">Attached evidence (2)</p><span class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Click any card to inspect</span>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <article class="overflow-hidden rounded-[14px] border border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <img src="assets/img/img5.png" alt="Fallen tree branch on a walking path" class="aspect-video w-full object-cover">
+                        <div class="flex items-start justify-between gap-2 px-3.5 py-3">
+                            <div>
+                                <p class="font-(family-name:--font-pm) text-[11px]">incident_capture_camera.jpg</p>
+                                <p class="mb-1 mt-0.5 font-(family-name:--font-pm) text-[10px] uppercase text-(color:--disabled)">Image &middot; 2.4 MB</p>
+                                <p class="text-xs leading-relaxed text-(color:--disabled)">Photographed live on site by resident camera.</p>
+                            </div><button type="button" class="shrink-0"></button>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[14px] border border-(color:--bd-secondary) bg-(color:--bg-secondary)">
+                        <div class="relative grid aspect-video place-items-center bg-(color:--dark)">
+                            <svg class="h-9 w-9" viewBox="0 0 36 36">
+                                <circle cx="18" cy="18" r="18" class="fill-(color:--light)" />
+                                <path d="M15 12l9 6-9 6z" class="fill-(color:--dark)" />
+                            </svg>
+                            <span class="absolute bottom-2 right-2 rounded-md bg-(color:--dark-70) px-1.5 py-0.5 font-(family-name:--font-pm) text-[10px] text-(color:--light)">0:12</span>
+                        </div>
+                        <div class="flex items-start justify-between gap-2 px-3.5 py-3">
+                            <div>
+                                <p class="font-(family-name:--font-pm) text-[11px]">quick_site_clip.mp4</p>
+                                <p class="mb-1 mt-0.5 font-(family-name:--font-pm) text-[10px] uppercase text-(color:--disabled)">Video &middot; 4.8 MB</p>
+                                <p class="text-xs leading-relaxed text-(color:--disabled)">12 second horizontal pan of incident.</p>
+                            </div><button type="button" class="shrink-0"></button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-6 flex items-center justify-between">
+                    <a href="report-location.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_1058)">
+                                <path d="M9.5 6H2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                                <path d="M6 9.5L2.5 6L6 2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#13231B" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_1058">
+                                    <rect width="12" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Back
+                    </a>
+                    <a href="report-review.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Continue
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_1065)">
+                                <path d="M2.70825 6.5H10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                                <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_1065">
+                                    <rect width="13" height="13" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
+            <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
+                <div class="sm:col-span-2 md:col-span-1">
+                    <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
+                    <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
+                    <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">File a report</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2>
+                    <ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)">
+                        <li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li>
+                        <li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="mb-2.5 mt-[18px] flex items-center justify-between">
-                <p class="font-(family-name:--font-pm) text-[10px] uppercase tracking-wider text-(color:--dark)">Attached evidence (2)</p><span class="whitespace-nowrap text-[13px] font-semibold text-(color:--success)">Click any card to inspect</span>
+            <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
+                <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
+                    <p>&copy; 2026 WargaReport. All rights reserved.</p>
+                    <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
+                </div>
             </div>
-            <div class="grid gap-3 sm:grid-cols-2">
-                <article class="overflow-hidden rounded-[14px] border border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <img src="assets/img/img5.png" alt="Fallen tree branch on a walking path" class="aspect-video w-full object-cover">
-                    <div class="flex items-start justify-between gap-2 px-3.5 py-3">
-                        <div><p class="font-(family-name:--font-pm) text-[11px]">incident_capture_camera.jpg</p><p class="mb-1 mt-0.5 font-(family-name:--font-pm) text-[10px] uppercase text-(color:--disabled)">Image &middot; 2.4 MB</p><p class="text-xs leading-relaxed text-(color:--disabled)">Photographed live on site by resident camera.</p></div><button type="button" class="shrink-0"><img src="assets/trash.svg" alt="Remove file"></button>
-                    </div>
-                </article>
-                <article class="overflow-hidden rounded-[14px] border border-(color:--bd-secondary) bg-(color:--bg-secondary)">
-                    <div class="relative grid aspect-video place-items-center bg-(color:--dark)">
-                        <svg class="h-9 w-9" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" class="fill-(color:--light)"/><path d="M15 12l9 6-9 6z" class="fill-(color:--dark)"/></svg>
-                        <span class="absolute bottom-2 right-2 rounded-md bg-(color:--dark-70) px-1.5 py-0.5 font-(family-name:--font-pm) text-[10px] text-(color:--light)">0:12</span>
-                    </div>
-                    <div class="flex items-start justify-between gap-2 px-3.5 py-3">
-                        <div><p class="font-(family-name:--font-pm) text-[11px]">quick_site_clip.mp4</p><p class="mb-1 mt-0.5 font-(family-name:--font-pm) text-[10px] uppercase text-(color:--disabled)">Video &middot; 4.8 MB</p><p class="text-xs leading-relaxed text-(color:--disabled)">12 second horizontal pan of incident.</p></div><button type="button" class="shrink-0"><img src="assets/trash.svg" alt="Remove file"></button>
-                    </div>
-                </article>
-            </div>
-
-            <div class="mt-6 flex items-center justify-between">
-                <a href="report-location.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--bd-primary) bg-(color:--bg-secondary) text-(color:--dark)">Back</a>
-                <a href="report-review.html" class="cursor-pointer inline-flex items-center justify-center gap-[7px] rounded-full border font-semibold px-5 py-2.5 text-xs border-(color:--success) bg-(color:--success) text-(color:--light)">Continue</a>
-            </div>
-        </section>
-    </main>
-    <footer class="mt-20 border-t border-(color:--bd-primary) bg-(color:--bg-secondary)">
-        <div class="mx-auto grid max-w-[1280px] gap-8 px-5 py-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:px-(--gutter)">
-            <div class="sm:col-span-2 md:col-span-1">
-                <p class="mb-3 font-(family-name:--font-f) text-[19px] font-bold">WargaReport</p>
-                <p class="max-w-[44ch] text-[13px] leading-[1.7] text-(color:--disabled)">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</p>
-                <p class="mt-4 max-w-[44ch] text-[13px] leading-relaxed text-(color:--danger)">Not for life-threatening emergencies &mdash; call 112 (National Emergency Call Center) or BPBD DKI directly.</p>
-            </div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Citizens</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">File a report</a></li><li><a href="#" class="hover:text-(color:--dark)">Track complaint</a></li><li><a href="#" class="hover:text-(color:--dark)">Public reports registry</a></li><li><a href="#" class="hover:text-(color:--dark)">My filing history</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Agencies</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Participating bureaus</a></li><li><a href="#" class="hover:text-(color:--dark)">Officer triage queue</a></li><li><a href="#" class="hover:text-(color:--dark)">SLA benchmarks</a></li></ul></div>
-            <div><h2 class="mb-3 font-(family-name:--font-pm) text-[10px] font-medium uppercase tracking-[0.08em] text-(color:--success)">Civic Trust</h2><ul class="flex flex-col gap-2.5 text-[13px] text-(color:--disabled)"><li><a href="#" class="hover:text-(color:--dark)">Help &amp; FAQs</a></li><li><a href="#" class="hover:text-(color:--dark)">Evidence guidelines</a></li><li><a href="#" class="hover:text-(color:--dark)">PII &amp; redaction policy</a></li></ul></div>
-        </div>
-        <div class="mx-auto max-w-[1280px] px-5 md:px-(--gutter)">
-            <div class="flex flex-col justify-between gap-2 border-t border-(color:--bd-secondary) py-5 text-[11px] text-(color:--disabled) sm:flex-row">
-                <p>&copy; 2026 WargaReport. All rights reserved.</p>
-                <p class="font-(family-name:--font-pm) text-[10px]">UU No. 25/2009 Compliant</p>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
